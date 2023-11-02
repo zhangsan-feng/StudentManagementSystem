@@ -21,3 +21,4 @@ temp/
 ./log/
 ./static/
 .idea
+mysql.sql
