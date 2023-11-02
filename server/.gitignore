@@ -20,3 +20,4 @@ manifest/output/
 temp/
 ./log/
 ./static/
+.idea
