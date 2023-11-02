@@ -1,0 +1,27 @@
+html{
+    width: 100%;
+    height: 100%;
+
+
+}
+body{
+    width: 99%;
+    height: 99%;
+
+}
+#root{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+.ant-layout {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+

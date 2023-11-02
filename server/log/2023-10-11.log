@@ -1,0 +1,958 @@
+2023-10-11 14:43:26.683 [ERRO] {1088bb8384fa8c17c750df08bd7a9518} [ 19 ms] [default] [StudentManagementSystem] [rows:0  ] SHOW FULL COLUMNS FROM `user`
+Error: Error 1146: Table 'studentmanagementsystem.user' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.6/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).mappingAndFilterToTableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_utility.go:56
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getFieldsFrom
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_fields.go:196
+13. github.com/gogf/gf/v2/database/gdb.(*Model).Fields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_fields.go:30
+14. server/api/v1/service/user.(*User).UserList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/user/user_list.go:12
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+16. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+19. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 14:43:26.692 [ERRO] {907d538584fa8c17c850df084da5aab5} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SHOW FULL COLUMNS FROM `user`
+Error: Error 1146: Table 'studentmanagementsystem.user' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.6/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameDeleted
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:92
+13. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionForSoftDeleting
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:144
+14. github.com/gogf/gf/v2/database/gdb.(*Model).formatCondition
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:618
+15. github.com/gogf/gf/v2/database/gdb.(*Model).getFormattedSqlAndArgs
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:522
+16. github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:470
+17. github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+18. server/api/v1/service/user.(*User).UserList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/user/user_list.go:13
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+23. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+27. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_handler_response.go:25
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+29. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+31. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+33. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+35. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+36. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+37. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+38. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+39. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 14:43:26.698 [ERRO] {98f7a88584fa8c17c950df08a102cf98} [  2 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT `id`,`username` FROM `user` LIMIT 0,10
+Error: Error 1146: Table 'studentmanagementsystem.user' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:113
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:492
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:471
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+9.  server/api/v1/service/user.(*User).UserList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/user/user_list.go:13
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_handler_response.go:25
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 14:43:26.703 [DEBU] user_list.go:15: Error 1146: Table 'studentmanagementsystem.user' doesn't exist, SELECT `id`,`username` FROM `user` LIMIT 0,10
+2023-10-11 14:43:58.959 [DEBU] {28b18e088cfa8c17cb50df083aba5a50} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 14:43:58.960 [DEBU] {20a0b1088cfa8c17cc50df08557dfec8} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` LIMIT 0,10
+2023-10-11 15:01:53.378 [DEBU] {c4c9e33086fb8c17ce50df08c51743d5} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` LIMIT 0,10
+2023-10-11 15:02:21.686 [DEBU] {ccd851c88cfb8c17d050df088d7f5234} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` LIMIT 0,10
+2023-10-11 15:06:42.398 [DEBU] {549ac27bc9fb8c1729a3cd1a1342106c} [  3 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 15:06:42.401 [DEBU] {c826127cc9fb8c172aa3cd1a3584f981} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` LIMIT 0,10
+2023-10-11 15:07:19.701 [DEBU] {c8de292bd2fb8c17c1ea025e9a14261d} [  4 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 15:07:19.882 [DEBU] {44b3832bd2fb8c17c2ea025e30aae8cf} [179 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:08:42.163 [DEBU] {a47f615ee5fb8c17c4ea025ebeec1fa8} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:09:03.105 [DEBU] {5867b33eeafb8c17c6ea025ec4b203ad} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:09:47.142 [DEBU] {08cc717ff4fb8c17c8ea025e5f4e2a4c} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:09:55.130 [DEBU] {d021ad5bf6fb8c17caea025ebebbb81a} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:10:05.825 [DEBU] {24e41bd9f8fb8c17ccea025e53a4c537} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:10:20.945 [DEBU] {2cf2185efcfb8c17ceea025e4db79cfa} [  5 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:10:21.981 [DEBU] {a4b50d9cfcfb8c17d0ea025e95f889f2} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:10:46.182 [DEBU] {14e8903e02fc8c17d2ea025e34969923} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:10:48.574 [DEBU] {dc5f26cd02fc8c17d4ea025e5886ab06} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:11:52.844 [DEBU] {d491bac311fc8c17d6ea025e0a82894b} [  4 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:12:37.231 [DEBU] {14837e191cfc8c17d8ea025e042b7bb3} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:14:40.375 [DEBU] {0c3449c538fc8c17daea025e5e6d8eb4} [  5 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:18:00.055 [DEBU] {5065e74167fc8c17dcea025e9eb73813} [ 26 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:18:15.050 [DEBU] {9c4f9dc06afc8c17deea025e0ee1c262} [ 10 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:18:34.615 [DEBU] {a4893b4f6ffc8c17e0ea025e324040ad} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:18:44.373 [DEBU] {003d0c9571fc8c17e2ea025ec8302a39} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:21:59.946 [DEBU] {5443e71d9ffc8c17e4ea025ed980ccf0} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:13.824 [DEBU] {241a253adafc8c17e6ea025e9b851406} [  4 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:28.494 [DEBU] {8cbdcea4ddfc8c17e8ea025e342cf3d2} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:31.419 [DEBU] {24cc1e53defc8c17eaea025ed1274b6e} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:42.286 [DEBU] {6485d7dae0fc8c17ecea025e2c7d67f9} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:55.347 [DEBU] {8067e5e4e3fc8c17eeea025efc529839} [  8 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:26:58.614 [DEBU] {64dc13a8e4fc8c17f0ea025ee40dda25} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:27:22.140 [DEBU] {f0df4f22eafc8c17f2ea025ecce67d72} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:29:53.188 [DEBU] {acf1154d0dfd8c17f4ea025e0980c321} [  6 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:30:48.412 [DEBU] {0446fe281afd8c1752538f25d7abe0ab} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 15:30:48.415 [DEBU] {e8eb3c291afd8c1753538f2510b0757e} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:30:48.456 [DEBU] {50dd56291afd8c1754538f259de9bd80} [ 40 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:31.041 [DEBU] {60a5421524fd8c1756538f25c5680c0e} [ 12 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:31:31.043 [DEBU] {f8500d1624fd8c1757538f258a7085d5} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:32.602 [DEBU] {1880067324fd8c1759538f250260e8ea} [  0 ms] [default] [StudentManagementSystem] [rows:6  ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 10,10
+2023-10-11 15:31:32.603 [DEBU] {84ee127324fd8c175a538f25b8693437} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:35.137 [DEBU] {8889130a25fd8c175c538f25e26f2e3f} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:31:35.137 [DEBU] {f4f8230a25fd8c175d538f25778a7f55} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:36.886 [DEBU] {3089677225fd8c175f538f25b8311405} [  0 ms] [default] [StudentManagementSystem] [rows:6  ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 10,10
+2023-10-11 15:31:36.887 [DEBU] {6cc6707225fd8c1760538f2599630303} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:38.456 [DEBU] {048df0cf25fd8c1762538f25b3f3a2b3} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:31:38.457 [DEBU] {cc5406d025fd8c1763538f25a199bd4a} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:50.745 [DEBU] {c4336eac28fd8c1765538f2557da136a} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:31:50.746 [DEBU] {2c7c86ac28fd8c1766538f256e355aaa} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:31:56.181 [DEBU] {d4c766f029fd8c1768538f25429e5122} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:31:56.183 [DEBU] {a40a8bf029fd8c1769538f25dac30e4b} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:32:49.062 [DEBU] {9847903f36fd8c176b538f25d4488197} [ 14 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:32:49.063 [DEBU] {8493704036fd8c176c538f259d7b0181} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:33:22.628 [DEBU] {f8450d113efd8c176e538f25fd008da8} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:33:22.629 [DEBU] {381427113efd8c176f538f25acf9aa2f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:33:39.737 [DEBU] {2898d10c42fd8c1771538f2560b3d0bd} [  1 ms] [default] [StudentManagementSystem] [rows:6  ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 10,10
+2023-10-11 15:33:39.737 [DEBU] {c085e20c42fd8c1772538f259acf6a6d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:33:40.727 [DEBU] {e401da4742fd8c1774538f25ed3218a3} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:33:40.728 [DEBU] {8428eb4742fd8c1775538f2541a8924e} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:41:42.790 [DEBU] {dcbefe84b2fd8c1777538f2511ed8050} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:41:42.792 [DEBU] {90102b85b2fd8c1778538f2529b239bc} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:41:50.071 [DEBU] {1c440337b4fd8c177a538f257c3de2e5} [  1 ms] [default] [StudentManagementSystem] [rows:6  ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 10,10
+2023-10-11 15:41:50.072 [DEBU] {94fe1b37b4fd8c177b538f25b1490d02} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:41:51.991 [DEBU] {ac657aa9b4fd8c177d538f256e262a07} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:41:51.992 [DEBU] {54fc86a9b4fd8c177e538f25718a7f61} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:45:06.486 [DEBU] {401b2ef2e1fd8c1780538f25b70f1b17} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:45:06.487 [DEBU] {643563f2e1fd8c1781538f25a80f07ae} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:45:06.490 [DEBU] {2ce57cf2e1fd8c1783538f25ba37566e} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:45:06.490 [DEBU] {1c208ef2e1fd8c1784538f2559bd7369} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:49:36.429 [DEBU] {d8ff0bcc20fe8c1787538f25d3b1bc46} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:49:36.431 [DEBU] {94923fcc20fe8c1788538f251c446c24} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:49:36.434 [DEBU] {484768cc20fe8c178a538f25f5530507} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 15:49:36.434 [DEBU] {b4467acc20fe8c178b538f252d02a66f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 15:56:12.800 [DEBU] {a8408c157dfe8c1729b1fe793ca3f988} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 15:56:12.805 [DEBU] {c41801167dfe8c172ab1fe79e66b514a} [  0 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT `id` FROM `class` WHERE id >1 LIMIT 0,10
+2023-10-11 15:56:12.806 [DEBU] {a43211167dfe8c172bb1fe793edbb332} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 15:56:28.020 [DEBU] {d462e6a080fe8c172db1fe794dc8bf3d} [  0 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT `id` FROM `class` WHERE id >1 LIMIT 0,10
+2023-10-11 15:56:28.021 [DEBU] {4401f6a080fe8c172eb1fe796301c358} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 15:58:38.360 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 15:58:38.367 [DEBU] {f0e7faf99efe8c177ad8403ecd493039} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 15:58:38.368 [DEBU] {7c8d28fa9efe8c177bd8403e5586049f} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 15:58:38.369 [DEBU] {48fd46fa9efe8c177cd8403eab0358b4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:01:34.080 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:01:34.084 [DEBU] {c4f691e3c7fe8c177ed8403e621805cf} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:01:34.084 [DEBU] {acdac0e3c7fe8c177fd8403e56acb27f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:01:36.510 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:01:36.512 [DEBU] {88a86274c8fe8c1781d8403e76cef3dc} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:01:36.513 [DEBU] {34d47674c8fe8c1782d8403eb776ce76} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:01:41.031 [DEBU] cmd.go:24: /v1/web/user/list
+2023-10-11 16:01:41.033 [DEBU] {1c7ae481c9fe8c1784d8403e54a9799b} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 16:01:41.034 [DEBU] {f462fb81c9fe8c1785d8403e0b92b1a5} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:01:41.035 [DEBU] {cc7c0e82c9fe8c1786d8403e84d739dd} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:01:41.036 [DEBU] cmd.go:24: /v1/web/user/list
+2023-10-11 16:01:41.037 [DEBU] {d4793182c9fe8c1788d8403e1f195ca6} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:01:41.039 [DEBU] {e4bb3982c9fe8c1789d8403ee5cc26c2} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:01:42.616 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:01:42.618 [DEBU] {cc1265e0c9fe8c178bd8403e47783d28} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:01:42.621 [DEBU] {44478be0c9fe8c178cd8403eced9f90b} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:01:42.623 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:01:42.625 [DEBU] {b43bc7e0c9fe8c178ed8403e5b39ffd5} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:01:42.626 [DEBU] {9cf2d7e0c9fe8c178fd8403e17a41b78} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:02:00.702 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:02:00.710 [DEBU] {68e8bd16cefe8c1791d8403ebb548ccc} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:02:00.711 [DEBU] {4c90d216cefe8c1792d8403e260474cb} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:02:10.276 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:02:10.281 [DEBU] {74340151d0fe8c1794d8403ee3040761} [  4 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:02:10.282 [DEBU] {08384651d0fe8c1795d8403e66a2e4d6} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:02:12.878 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:02:12.879 [DEBU] {106615ecd0fe8c1797d8403e6e87c233} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:02:12.880 [DEBU] {3c501decd0fe8c1798d8403ec97b57dc} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:02:39.642 [DEBU] cmd.go:24: /v1/web/class/list
+2023-10-11 16:02:39.643 [DEBU] {00225527d7fe8c179ad8403e06d28fa0} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LIMIT 0,2
+2023-10-11 16:02:39.644 [DEBU] {6c575e27d7fe8c179bd8403ed596ed39} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:05:46.218 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:05:46.222 [DEBU] {48ee309802ff8c17d4355c409ab87aef} [  2 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:05:46.223 [DEBU] {bc975e9802ff8c17d5355c4048660d4f} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:05:46.249 [DEBU] {18cd6d9802ff8c17d6355c4066943381} [ 25 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) LIMIT 0,2
+2023-10-11 16:05:46.250 [DEBU] {fc30fc9902ff8c17d7355c405cf2d8f4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:10:25.228 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:10:25.234 [DEBU] {7c8c778e43ff8c17d9355c408fb0e5ef} [  5 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) LIMIT 0,2
+2023-10-11 16:10:25.235 [DEBU] {089fc98e43ff8c17da355c40451aee44} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:10:46.577 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:10:46.599 [DEBU] {50cc238848ff8c17dc355c40950cf8da} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) LIMIT 0,2
+2023-10-11 16:10:46.600 [DEBU] {8c3a428848ff8c17dd355c403004dea5} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:11:58.961 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:11:58.966 [DEBU] {50e8776159ff8c17ae5e261d28a2a48e} [  2 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:11:58.969 [DEBU] {84caa76159ff8c17af5e261d092cf857} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:11:58.970 [ERRO] {e447cf6159ff8c17b05e261d9c9a3fe3} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SHOW FULL COLUMNS FROM `major`
+Error: Error 1146: Table 'studentmanagementsystem.major' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.6/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameDeleted
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:92
+13. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionOfTableStringForSoftDeleting
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:163
+14. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionForSoftDeleting
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:130
+15. github.com/gogf/gf/v2/database/gdb.(*Model).formatCondition
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:618
+16. github.com/gogf/gf/v2/database/gdb.(*Model).getFormattedSqlAndArgs
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:522
+17. github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:470
+18. github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+19. server/api/v1/service/class.(*Class).ClassList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/class/class_list.go:14
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+28. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+30. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+32. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+34. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+36. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+38. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+40. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+42. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+43. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+44. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+45. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+46. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 16:11:58.980 [ERRO] {94de6e6259ff8c17b15e261d5a55f3aa} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+Error: Error 1146: Table 'studentmanagementsystem.major' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:113
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:492
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:471
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+9.  server/api/v1/service/class.(*Class).ClassList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/class/class_list.go:14
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 16:11:58.988 [DEBU] class_list.go:16: Error 1146: Table 'studentmanagementsystem.major' doesn't exist, SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:11:58.989 [DEBU] {8883ee6259ff8c17b25e261d770ed5be} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:12:25.896 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:12:25.902 [DEBU] {aceae1a65fff8c17550ecb4bda508f26} [  4 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:12:25.904 [DEBU] {0ccb1ea75fff8c17560ecb4bf58a52ce} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:12:25.905 [ERRO] {c86045a75fff8c17570ecb4bb43ebadc} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SHOW FULL COLUMNS FROM `major`
+Error: Error 1146: Table 'studentmanagementsystem.major' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.6/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameDeleted
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:92
+13. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionOfTableStringForSoftDeleting
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:163
+14. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionForSoftDeleting
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_time.go:130
+15. github.com/gogf/gf/v2/database/gdb.(*Model).formatCondition
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:618
+16. github.com/gogf/gf/v2/database/gdb.(*Model).getFormattedSqlAndArgs
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:522
+17. github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:470
+18. github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+19. server/api/v1/service/class.(*Class).ClassList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/class/class_list.go:14
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+28. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+30. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+32. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+34. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+36. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+38. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+40. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+42. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+43. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+44. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+45. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+46. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 16:12:25.912 [ERRO] {4c02b1a75fff8c17580ecb4bac246cd1} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+Error: Error 1146: Table 'studentmanagementsystem.major' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:113
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:492
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:471
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).All
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_select.go:30
+9.  server/api/v1/service/class.(*Class).ClassList
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/class/class_list.go:14
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-11 16:12:25.916 [DEBU] class_list.go:16: Error 1146: Table 'studentmanagementsystem.major' doesn't exist, SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:12:25.917 [DEBU] {44c3fca75fff8c17590ecb4b541bd8b8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:13:07.066 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:13:07.077 [DEBU] {dc883c3d69ff8c175b0ecb4b4e2bcd4a} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:13:07.081 [DEBU] {38b5723d69ff8c175c0ecb4b24cd0c7e} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:13:07.082 [DEBU] {9072a33d69ff8c175d0ecb4b3d7ff3e4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:16:11.639 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:16:11.645 [DEBU] {08c7493694ff8c171e9bbf4c15b54abb} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:16:11.648 [DEBU] {3ca6863694ff8c171f9bbf4c091e71ab} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:16:11.651 [DEBU] {dc50b43694ff8c17209bbf4cddb0a3d9} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:16:43.281 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:16:43.286 [DEBU] {c8d33a949bff8c170474b820f7857073} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:16:43.289 [DEBU] {005275949bff8c170574b8200f9551bf} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:16:43.291 [DEBU] {78ef96949bff8c170674b820470481ac} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:18:02.804 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:18:02.820 [DEBU] {7845cd18aeff8c173d19cd4b11ffabca} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:18:02.822 [DEBU] {a41c0619aeff8c173e19cd4b52266ec6} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-11 16:18:02.825 [DEBU] {e8592519aeff8c173f19cd4b1ef151ad} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:18:02.827 [DEBU] {bcfe6519aeff8c174019cd4b4d59cc8d} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:18:02.829 [DEBU] {84708119aeff8c174119cd4b551e1e33} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:18:19.142 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:18:19.143 [DEBU] {b4afe7e5b1ff8c174319cd4b11d64919} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:18:19.144 [DEBU] {e4b2fae5b1ff8c174419cd4b9d394d54} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:18:58.153 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:18:58.158 [DEBU] {bcab1ffbbaff8c174619cd4b93f48b0d} [  5 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT * FROM `class` LEFT JOIN `class_user` ON (class.id=class_user.class_id) RIGHT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:18:58.159 [DEBU] {301d67fbbaff8c174719cd4b7496d332} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:21:31.339 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:21:31.342 [DEBU] {e041c9a5deff8c17d76e6459519eadaf} [  1 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:21:31.347 [DEBU] {9c99f1a5deff8c17d86e64593b26b03d} [  4 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:21:31.374 [DEBU] {349963a6deff8c17d96e64591180049f} [ 23 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:21:31.375 [DEBU] {f843d5a7deff8c17da6e645967a3d59f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:24:24.553 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:24:24.558 [DEBU] {80ff2ffa06008d179e7fad3eae4f0f8a} [  3 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-11 16:24:24.561 [DEBU] {0ce16cfa06008d179f7fad3ed4a5bca9} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-11 16:24:24.562 [DEBU] {544d8bfa06008d17a07fad3ec529ff94} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:24:24.562 [DEBU] {6c859afa06008d17a17fad3eae8b6d86} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:38:13.454 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:38:13.461 [DEBU] {18f893f8c7008d17a37fad3e65c11b39} [  4 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-11 16:38:13.463 [DEBU] {14efe1f8c7008d17a47fad3e27e849bf} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:38:13.464 [DEBU] {04a9fbf8c7008d17a57fad3ed8eb55c4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:38:13.465 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:38:13.467 [DEBU] {10581df9c7008d17a77fad3e48fa9911} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:38:13.467 [DEBU] {5c3b2ff9c7008d17a87fad3e418ac59c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:38:29.467 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:38:29.470 [DEBU] {f8efe4b2cb008d17aa7fad3e79b7a32f} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:38:29.470 [DEBU] {ec3e06b3cb008d17ab7fad3e14171ba6} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:38:29.471 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:38:29.472 [DEBU] {ecfc29b3cb008d17ad7fad3e3767ad99} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:38:29.473 [DEBU] {68b239b3cb008d17ae7fad3e0b9f454b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:38:31.970 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:38:31.971 [DEBU] {88c91248cc008d17b07fad3e4c54cf2c} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:38:31.972 [DEBU] {48a82348cc008d17b17fad3e53a634a1} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:38:31.974 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:38:31.975 [DEBU] {e0b65448cc008d17b37fad3e650c5f01} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:38:31.976 [DEBU] {b0cf6648cc008d17b47fad3eedae43f4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:47:48.138 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:47:48.140 [DEBU] {2c2248c64d018d17b67fad3e4206652c} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:47:48.141 [DEBU] {ecd060c64d018d17b77fad3ecfdd4744} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:48:19.914 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:48:19.916 [DEBU] {1474462c55018d17b97fad3ecd4e6c30} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:48:19.917 [DEBU] {c0526b2c55018d17ba7fad3e1f0725d1} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:48:22.116 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list?page=2
+2023-10-11 16:48:22.116 [DEBU] {f8dc7faf55018d17bc7fad3e306f8939} [  0 ms] [default] [StudentManagementSystem] [rows:6  ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 10,10
+2023-10-11 16:48:22.117 [DEBU] {048e90af55018d17bd7fad3e43a95ff2} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:48:23.258 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list?page=1
+2023-10-11 16:48:23.259 [DEBU] {001d94f355018d17bf7fad3ea171ec1b} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:48:23.260 [DEBU] {68a2a6f355018d17c07fad3e5ef4a7cf} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:48:25.810 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:48:25.813 [DEBU] {1457c68b56018d17c27fad3ecf15915f} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:48:25.814 [DEBU] {98bbec8b56018d17c37fad3ed30db789} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:48:25.817 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:48:25.820 [DEBU] {1c97468c56018d17c57fad3e9dd81cb5} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:48:25.822 [DEBU] {b4095f8c56018d17c67fad3e9692421b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:48:59.937 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:48:59.942 [DEBU] {20fedc7d5e018d17c87fad3ea1846b46} [  4 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:48:59.943 [DEBU] {2880207e5e018d17c97fad3e79ad3a05} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:49:10.118 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:49:10.121 [DEBU] {9080cfdc60018d17cb7fad3eea0eb4e0} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:49:10.123 [DEBU] {9400e7dc60018d17cc7fad3ef539ff8b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:49:53.204 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:49:53.212 [DEBU] {f49228e56a018d17ce7fad3ed5a40ebc} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:49:53.214 [DEBU] {24ea46e56a018d17cf7fad3e2c9442b1} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:50:06.901 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:50:06.902 [DEBU] {441334156e018d17d17fad3ede15d292} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:50:06.923 [DEBU] {44b974156e018d17d27fad3e9881f2e0} [ 17 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:50:13.926 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:50:13.927 [DEBU] {4c36e7b76f018d17d47fad3e1c928095} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:50:13.928 [DEBU] {9025fab76f018d17d57fad3e9ef69f1b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:51:21.966 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:51:21.973 [DEBU] {98cc818f7f018d17d77fad3ea115dc95} [  5 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:51:21.974 [DEBU] {34e3dd8f7f018d17d87fad3eb6d1f254} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:06.495 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:06.499 [DEBU] {ac8b96ed89018d17da7fad3eedd35465} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:06.501 [DEBU] {34e6d1ed89018d17db7fad3eb9a2aedf} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:09.682 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:09.685 [DEBU] {88b18aab8a018d17dd7fad3e3cbcce7c} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:09.686 [DEBU] {641ca8ab8a018d17de7fad3e8ff07d58} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:17.893 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:17.894 [DEBU] {1cdeed948c018d17e07fad3e64e83741} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:17.896 [DEBU] {645c09958c018d17e17fad3e51ae1206} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:21.103 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:21.105 [DEBU] {9c7f52548d018d17e37fad3e28f52d4f} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:21.106 [DEBU] {383862548d018d17e47fad3e3e7dfb5f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:32.923 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:32.924 [DEBU] {04ffca1490018d17e67fad3e22029926} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:32.925 [DEBU] {d0afda1490018d17e77fad3e4f1e18bf} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:37.176 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:37.179 [DEBU] {7839501291018d17e97fad3e2a272e7d} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:37.180 [DEBU] {307b791291018d17ea7fad3e36901a29} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:52:37.182 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:37.183 [DEBU] {b0069b1291018d17ec7fad3e72351b07} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:37.183 [DEBU] {6c91ae1291018d17ed7fad3eda6edf3a} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:52:38.595 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:38.597 [DEBU] {885fde6691018d17ef7fad3efbf6017d} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:38.600 [DEBU] {7c7a106791018d17f07fad3e3b7eefa5} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:38.602 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:38.603 [DEBU] {bc67426791018d17f27fad3ea4e6603e} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:38.604 [DEBU] {d00d566791018d17f37fad3e99edd587} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:44.321 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:44.323 [DEBU] {54062ebc92018d17f57fad3e7912a9d5} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:44.324 [DEBU] {0c3e48bc92018d17f67fad3eff1fbc5c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:52:44.325 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:44.326 [DEBU] {4c6568bc92018d17f87fad3e0c58c0c6} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:44.328 [DEBU] {b82780bc92018d17f97fad3e3dbf160d} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:52:55.108 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:55.110 [DEBU] {844e213f95018d17fb7fad3e2e0abafa} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:55.111 [DEBU] {b465393f95018d17fc7fad3ebc3d83e5} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:55.112 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:52:55.113 [DEBU] {f0a35f3f95018d17fe7fad3e058552fa} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:52:55.114 [DEBU] {ec2d703f95018d17ff7fad3ef4738a93} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:52:57.935 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:57.936 [DEBU] {a06199e795018d170180ad3e381cff16} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:57.937 [DEBU] {44b1aae795018d170280ad3ef022e9e3} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:52:57.938 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:52:57.939 [DEBU] {8468cce795018d170480ad3e9ab4563f} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:52:57.940 [DEBU] {dc53d4e795018d170580ad3ed4e78d86} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:53:00.486 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:53:00.487 [DEBU] {bcb3ab7f96018d170780ad3ee095f9c5} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:53:00.488 [DEBU] {f433bc7f96018d170880ad3ea11091d2} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:53:00.492 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:53:00.493 [DEBU] {ccbdff7f96018d170a80ad3e83bd9113} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:53:00.494 [DEBU] {30a3108096018d170b80ad3e26e54d5d} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:53:58.985 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:53:58.988 [DEBU] {403e8c1ea4018d170d80ad3e06e60a22} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:53:58.989 [DEBU] {848fb01ea4018d170e80ad3e026abce8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:54:15.598 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:54:15.600 [DEBU] {604bbefca7018d171080ad3e0dc37249} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:54:15.601 [DEBU] {bcffd5fca7018d171180ad3ef57612b4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:54:26.785 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:54:26.787 [DEBU] {2c738297aa018d171380ad3e2a3f88bc} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:54:26.788 [DEBU] {ac42a197aa018d171480ad3e98d1a6c9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:54:26.789 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:54:26.792 [DEBU] {d83cd097aa018d171680ad3e0f792fdf} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:54:26.793 [DEBU] {50dee897aa018d171780ad3e1c3459f5} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:54:29.285 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:54:29.287 [DEBU] {3c0d7a2cab018d171980ad3eb3a0c9e8} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:54:29.288 [DEBU] {305d9f2cab018d171a80ad3e4620d17a} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:54:29.289 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:54:29.291 [DEBU] {dcfcc12cab018d171c80ad3e647ab8e0} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:54:29.292 [DEBU] {1cd5d12cab018d171d80ad3eb66acb87} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:54:37.140 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:54:37.152 [DEBU] {c4f45101ad018d171f80ad3e731c4a30} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:54:37.153 [DEBU] {187c6701ad018d172080ad3e23bc4d5b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:54:58.398 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:54:58.400 [DEBU] {00b0c7f3b1018d172280ad3e32fe7132} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:54:58.403 [DEBU] {4c3302f4b1018d172380ad3e2cca13cc} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:36.835 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:55:36.842 [DEBU] {1c67eee6ba018d172580ad3e17701389} [  4 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:36.861 [DEBU] {780c41e8ba018d172680ad3e7055f9ac} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:38.445 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=2
+2023-10-11 16:55:38.447 [DEBU] {60acc846bb018d172880ad3e87af2bd5} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 2,2
+2023-10-11 16:55:38.448 [DEBU] {58c9db46bb018d172980ad3e1c448e28} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:41.186 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=1
+2023-10-11 16:55:41.187 [DEBU] {5ccc21eabb018d172b80ad3ef090c3dc} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:41.188 [DEBU] {70052aeabb018d172c80ad3efb9ce43b} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:47.741 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:55:47.742 [DEBU] {9896d970bd018d172e80ad3e76655464} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:47.743 [DEBU] {c8cae870bd018d172f80ad3e821330b7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:48.895 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:55:48.897 [DEBU] {3417aab5bd018d173180ad3e36bfd893} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:48.898 [DEBU] {1cddc4b5bd018d173280ad3eca3ef301} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:51.394 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:55:51.394 [DEBU] {ac4b8b4abe018d173480ad3ebec3eee7} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:55:51.395 [DEBU] {30fa944abe018d173580ad3eaa97bd61} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:55:51.397 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:55:51.398 [DEBU] {680bc44abe018d173780ad3edca26b76} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:55:51.399 [DEBU] {f0d7d34abe018d173880ad3ecc4382b8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:55:53.127 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:55:53.129 [DEBU] {081decb1be018d173a80ad3ec94d36db} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:53.130 [DEBU] {7c9504b2be018d173b80ad3ea20836c0} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:53.131 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 16:55:53.133 [DEBU] {185e22b2be018d173d80ad3e57d4533d} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:53.134 [DEBU] {d0da3db2be018d173e80ad3e23679b9c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:55.532 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=2
+2023-10-11 16:55:55.534 [DEBU] {f4e54741bf018d174080ad3ee2bf3620} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 2,2
+2023-10-11 16:55:55.534 [DEBU] {ac3e5041bf018d174180ad3e6cfd0e0d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:57.546 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=1
+2023-10-11 16:55:57.546 [DEBU] {24a940b9bf018d174380ad3e5bc5a773} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 16:55:57.547 [DEBU] {0c7749b9bf018d174480ad3e32cb3be2} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 16:55:59.114 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:55:59.139 [DEBU] {2c2ac316c0018d174680ad3e9a969188} [ 24 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:55:59.140 [DEBU] {80b13618c0018d174780ad3e2485d21a} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 16:55:59.141 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-11 16:55:59.142 [DEBU] {288c5918c0018d174980ad3e42407bf4} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-11 16:55:59.143 [DEBU] {081b6318c0018d174a80ad3e7243771d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-11 17:00:11.784 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:00:11.786 [DEBU] {74ee0bebfa018d174c80ad3e8fcfaf83} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:00:11.787 [DEBU] {a8a72debfa018d174d80ad3e7288c06d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:00:11.789 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:00:11.790 [DEBU] {8c074eebfa018d174f80ad3eab9f9675} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:00:11.790 [DEBU] {a0c55debfa018d175080ad3eb1bc72e7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:00:56.089 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:00:56.093 [DEBU] {8c73dc3b05028d175280ad3e73d3ca0a} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:00:56.094 [DEBU] {ec8b183c05028d175380ad3e8f9b3a13} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:01:15.258 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:01:15.262 [DEBU] {78d98cb209028d175580ad3ea09bd07e} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:01:15.263 [DEBU] {40169cb209028d175680ad3e6892e832} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:01:19.728 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:01:19.730 [DEBU] {f040d4bc0a028d175880ad3e89a248fb} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:01:19.731 [DEBU] {1824e7bc0a028d175980ad3e4d55d4d2} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:01:45.399 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:01:45.403 [DEBU] {6cd900b710028d175b80ad3ed8da276d} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:01:45.409 [DEBU] {00703ab710028d175c80ad3ea83aa521} [  4 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:01:53.463 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:01:53.465 [DEBU] {44be989712028d175e80ad3e603339c0} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:01:53.466 [DEBU] {88c1b09712028d175f80ad3eb5a2bc6f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:04:26.074 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:04:26.077 [DEBU] {dce3f21f36028d176180ad3e95ee2303} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:04:26.078 [DEBU] {58f5142036028d176280ad3e2194dd56} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:10:24.221 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:10:24.224 [DEBU] {fc8b288389028d176480ad3e8e9c6b81} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:10:24.224 [DEBU] {90dd478389028d176580ad3e2404200c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:10:50.337 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:10:50.338 [DEBU] {b015c6978f028d176780ad3efb59d913} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:10:50.339 [DEBU] {90aace978f028d176880ad3e8e4080a8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:14:00.671 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:14:00.674 [DEBU] {3895a0e8bb028d176a80ad3eb881ed19} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:14:00.675 [DEBU] {7c88c3e8bb028d176b80ad3e5ab48c0d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:14:00.678 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:14:00.679 [DEBU] {4886f4e8bb028d176d80ad3ee80d4e71} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:14:00.680 [DEBU] {b8000ae9bb028d176e80ad3e4f02a34b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:14:14.786 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:14:14.787 [DEBU] {a00bdf31bf028d177080ad3e46f4aa43} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:14:14.788 [DEBU] {e0caee31bf028d177180ad3ea886d5b8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:33.982 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:17:33.987 [DEBU] {00c6f392ed028d177380ad3e4a7f098d} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:17:33.988 [DEBU] {80ea2193ed028d177480ad3e22c11b68} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:33.990 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:17:33.991 [DEBU] {d4935b93ed028d177680ad3e1044f5ea} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:17:33.992 [DEBU] {b8e96c93ed028d177780ad3e25c2db91} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:40.815 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:17:40.816 [DEBU] {dcfb252aef028d177980ad3eccfa51a4} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:17:40.818 [DEBU] {a4bf442aef028d177a80ad3ef6bf9feb} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:40.820 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-11 17:17:40.822 [DEBU] {e4a3842aef028d177c80ad3ea74fa8b7} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:17:40.824 [DEBU] {74a59d2aef028d177d80ad3e6e4064fc} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:44.311 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=2
+2023-10-11 17:17:44.312 [DEBU] {9c0991faef028d177f80ad3e3b80ef0a} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 2,2
+2023-10-11 17:17:44.313 [DEBU] {5c0b98faef028d178080ad3ed0848bef} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-11 17:17:56.424 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list?page=1
+2023-10-11 17:17:56.425 [DEBU] {908b7dccf2028d178280ad3e2794fadb} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-11 17:17:56.425 [DEBU] {8c2687ccf2028d178380ad3e3ea4bc28} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`

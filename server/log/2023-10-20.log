@@ -1,0 +1,1502 @@
+2023-10-20 10:09:05.941 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-20 10:09:05.945 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-20 10:09:49.596 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-20 10:09:49.601 [DEBU] {6c5a163acfae8f179caed34ba0a7b189} [  4 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 10:09:49.604 [DEBU] {242f663acfae8f179daed34b608cfccc} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-20 10:14:04.739 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-20 10:14:04.743 [DEBU] {80c8c8a10aaf8f17a0aed34ba64e88b9} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-20 10:14:05.649 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:14:05.649 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:14:05.650 [DEBU] {84a0fcd70aaf8f17a5aed34bf7b457fe} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:14:05.651 [DEBU] {84a0fcd70aaf8f17a6aed34bc76c5234} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 10:14:05.652 [DEBU] {38211dd80aaf8f17a7aed34b3405ff31} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:14:05.653 [DEBU] {38211dd80aaf8f17a8aed34b8c5f28e6} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:16:38.756 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:16:38.756 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:16:38.758 [DEBU] {5830e37d2eaf8f17abaed34bc5872ca9} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:16:38.758 [DEBU] {5830e37d2eaf8f17acaed34b2488292a} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:16:38.760 [DEBU] {4c98047e2eaf8f17adaed34bba3f912d} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:20:33.192 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-20 10:20:33.195 [DEBU] {8c716f1365af8f17afaed34b877cf1ee} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-20 10:39:37.490 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:39:37.490 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:39:37.494 [DEBU] {4467da806fb08f17b2aed34bdfc3cbca} [  3 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:39:37.494 [DEBU] {a850e2806fb08f17b3aed34b1fbe8796} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:39:37.499 [DEBU] {9c0642816fb08f17b4aed34bc60aa26c} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:39:53.233 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:39:53.235 [DEBU] {6859342b73b08f17b6aed34bcde83a2f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:39:53.236 [DEBU] {d8c4582b73b08f17b7aed34b75df68bd} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:46:56.605 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:46:56.608 [DEBU] {64ab22bed5b08f17b9aed34bb69ac142} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:46:56.609 [DEBU] {04934abed5b08f17baaed34bb8226f5a} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:47:28.286 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:47:28.288 [DEBU] {004a761eddb08f17bcaed34b7a37c76f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:47:28.289 [DEBU] {78789d1eddb08f17bdaed34b09328bb4} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:48:38.272 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:48:38.275 [DEBU] {d4a8fb69edb08f17bfaed34b570e2fcf} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:48:38.276 [DEBU] {60121a6aedb08f17c0aed34b61872383} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:49:01.147 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:49:01.148 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:49:01.149 [DEBU] {ec2365bdf2b08f17c3aed34b8518ab2b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:49:01.149 [DEBU] {200578bdf2b08f17c4aed34ba22ae0b7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:49:01.150 [DEBU] {90468abdf2b08f17c5aed34b78d53d07} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:49:15.053 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:49:15.057 [DEBU] {a0c164faf5b08f17c7aed34b99dc7aeb} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:49:15.060 [DEBU] {a0b188faf5b08f17c8aed34bf10d83d5} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:49:38.172 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:49:38.173 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:49:38.175 [DEBU] {5030525cfbb08f17cbaed34ba3e92355} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:49:38.177 [DEBU] {68e3595cfbb08f17ccaed34b10f1c1e7} [  3 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:49:38.180 [DEBU] {589d8c5cfbb08f17cdaed34bbf5d6efe} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:53:16.105 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:53:16.105 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:53:16.109 [DEBU] {b0f4281a2eb18f17d1aed34b4f029b08} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:53:16.112 [DEBU] {5cad191a2eb18f17d0aed34b384b2251} [  6 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:53:16.113 [DEBU] {c0ff801a2eb18f17d2aed34be43a4279} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:53:44.992 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:53:44.994 [DEBU] {5889f4d334b18f17d4aed34ba5fa7133} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:53:44.996 [DEBU] {ecd20cd434b18f17d5aed34bb4e782dc} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:53:53.953 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:53:53.959 [DEBU] {1cc60dea36b18f17d7aed34bf7364ac8} [  4 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:53:53.962 [DEBU] {243f78ea36b18f17d8aed34b93021b2e} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:54:09.671 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:54:09.671 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:54:09.676 [DEBU] {bcabfe923ab18f17dbaed34b4ba78d8b} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:54:09.676 [DEBU] {bcabfe923ab18f17dcaed34b737940ba} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:54:09.681 [DEBU] {28c64a933ab18f17ddaed34bee249db2} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:54:20.988 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:54:20.990 [DEBU] {a84a6f353db18f17dfaed34bc45d3e43} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:54:20.991 [DEBU] {603991353db18f17e0aed34b18cb19cf} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:56:43.910 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:56:43.912 [DEBU] {0043397c5eb18f17e2aed34b01501f66} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:56:43.914 [DEBU] {f0ae5f7c5eb18f17e3aed34b9c182fab} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:57:13.336 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:57:13.375 [DEBU] {70aacb5665b18f17e5aed34b72af5b31} [ 28 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:57:13.396 [DEBU] {34ff0a5965b18f17e6aed34b2fc8afd7} [ 12 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:57:14.918 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:57:14.918 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 10:57:14.921 [DEBU] {dcc577b465b18f17e9aed34b417ae1b7} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:57:14.922 [DEBU] {244c81b465b18f17eaaed34ba17b5785} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 10:57:14.922 [DEBU] {04f39fb465b18f17ebaed34b270c37e2} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 10:57:31.596 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 10:57:31.603 [DEBU] {2023d79669b18f17edaed34b14862ccf} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 10:57:31.604 [DEBU] {7096f59669b18f17eeaed34be3f6053d} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:01:39.958 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:01:39.963 [DEBU] {e4d21e6aa3b18f17f0aed34bc1a9ed4c} [  3 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:01:39.964 [DEBU] {1020556aa3b18f17f1aed34ba7482b4d} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:01:54.542 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:01:54.544 [DEBU] {9c935bcfa6b18f17f3aed34b4f28740b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:01:54.545 [DEBU] {d4c474cfa6b18f17f4aed34bbc1f2592} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:02:04.955 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:02:04.958 [DEBU] {84d8003ca9b18f17f6aed34b6c3302b5} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:02:04.961 [DEBU] {789e553ca9b18f17f7aed34bb0430c56} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:02:54.082 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:02:54.095 [DEBU] {a099e8acb4b18f17f9aed34bbe0b1a47} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:02:54.097 [DEBU] {e84904adb4b18f17faaed34bc646874c} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:28:12.692 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:28:12.697 [DEBU] {a8b3704016b38f17fcaed34bf4279308} [  4 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:28:12.699 [DEBU] {7c0bc24016b38f17fdaed34b79b231bc} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:28:49.380 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:28:49.382 [DEBU] {6ceb31cb1eb38f17ffaed34be19fc6b3} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:28:49.384 [DEBU] {646952cb1eb38f1700afd34be8176f15} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:40:21.987 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:40:21.989 [DEBU] {84a0c60dc0b38f1702afd34b1aa89e4f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:40:21.990 [DEBU] {98d9e70dc0b38f1703afd34b39d607b0} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:44:51.685 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:44:51.693 [DEBU] {5cc023d9feb38f1705afd34b5a00d116} [  5 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:44:51.696 [DEBU] {bcfa9cd9feb38f1706afd34b79aa1a78} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:45:46.326 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:45:46.329 [DEBU] {d8c1f4910bb48f1708afd34bfb6a1021} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:45:46.332 [DEBU] {807b29920bb48f1709afd34b0d5756d1} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 11:48:30.740 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 11:48:30.742 [DEBU] {6cf0b9d931b48f170bafd34b030a9190} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 11:48:30.744 [DEBU] {dc3ee7d931b48f170cafd34bad277c2d} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:44:26.937 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:44:26.940 [DEBU] {44836b7785ba8f170fafd34b07eff143} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:44:26.941 [DEBU] {70228c7785ba8f1710afd34b6e28c62a} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:44:36.718 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:44:36.720 [DEBU] {740f66be87ba8f1713afd34bd31a2249} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:44:36.722 [DEBU] {082d7dbe87ba8f1714afd34b5fb919c8} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:44:36.723 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 13:44:36.725 [DEBU] {544fc3be87ba8f1716afd34bac5074fa} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 13:48:07.806 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:48:07.806 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 13:48:07.809 [DEBU] {f08035e4b8ba8f171aafd34baab374f7} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 13:48:07.809 [DEBU] {f08035e4b8ba8f1719afd34bcb72dbe6} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:48:07.810 [DEBU] {8c2162e4b8ba8f171bafd34b29d19d96} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:50:13.795 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:50:13.799 [DEBU] {b8dfc839d6ba8f171dafd34b09a55977} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:50:13.800 [DEBU] {a493f139d6ba8f171eafd34b9b5519b3} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:50:18.676 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:50:18.680 [DEBU] {acf4cd5cd7ba8f1720afd34b9753d450} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:50:18.684 [DEBU] {d0de0a5dd7ba8f1721afd34b2e63ad13} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:57:46.933 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 13:57:46.933 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 13:57:46.936 [DEBU] {7c0ae5ba3fbb8f1724afd34b8a750a82} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 13:57:46.937 [DEBU] {7c0ae5ba3fbb8f1725afd34bba5ad20d} [  3 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 13:57:46.939 [DEBU] {20db1fbb3fbb8f1726afd34ba0e2334c} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 13:57:47.181 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add?class_id=1111&teacher_id=3&student_id=16&student_id=14
+2023-10-20 14:02:44.014 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add?class_id=1111&teacher_id=3&student_id=16&student_id=14
+2023-10-20 14:02:44.167 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:02:44.170 [DEBU] {a84a68ef84bb8f178e77d8551c921513} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 14:02:44.171 [DEBU] {445f8aef84bb8f178f77d85537073cf7} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:02:44.172 [DEBU] {bc1e9eef84bb8f179077d855bafa378d} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:02:56.292 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add?class_id=1111&teacher_id=3&student_id=16&student_id=14
+2023-10-20 14:03:04.989 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add?class_id=1111&teacher_id=3&student_id=16&student_id=14
+2023-10-20 14:03:12.307 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:03:12.307 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:03:12.308 [DEBU] {18669e7c8bbb8f179577d855a59d47d6} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:03:12.309 [DEBU] {2812a67c8bbb8f179677d8555b43b9d7} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 14:03:12.310 [DEBU] {94e8c27c8bbb8f179777d8555fc38d6c} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:03:12.311 [DEBU] {4432c47c8bbb8f179877d855009453f8} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:03:31.345 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:03:31.346 [DEBU] admin_class_add.go:14: 311
+2023-10-20 14:03:31.347 [DEBU] admin_class_add.go:15: 3
+2023-10-20 14:03:31.347 [DEBU] admin_class_add.go:16: 13
+2023-10-20 14:03:54.984 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:03:54.986 [DEBU] {ec72646c95bb8f179c77d855a07a3829} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:03:54.987 [DEBU] {90cb806c95bb8f179d77d855af5c3f0b} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:03:56.290 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:03:56.290 [DEBU] admin_class_add.go:14: 311
+2023-10-20 14:03:56.291 [DEBU] admin_class_add.go:15: 3
+2023-10-20 14:03:56.292 [DEBU] admin_class_add.go:16: 14,13
+2023-10-20 14:08:14.085 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:08:14.088 [DEBU] {78dc10c0d1bb8f17a077d85507fa78f7} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:08:14.090 [DEBU] {e8f13ac0d1bb8f17a177d85562da4398} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:08:15.902 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:08:15.902 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:08:15.903 [DEBU] {a8784b2cd2bb8f17a477d85545840f49} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:08:15.904 [DEBU] {0429532cd2bb8f17a577d855ef9b3057} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:08:15.905 [DEBU] {dcaf712cd2bb8f17a677d855fab5c8e9} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:08:19.885 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:08:19.886 [DEBU] admin_class_add.go:14:
+2023-10-20 14:08:19.886 [DEBU] admin_class_add.go:15:
+2023-10-20 14:08:19.887 [DEBU] admin_class_add.go:16:
+2023-10-20 14:08:49.978 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:08:49.980 [DEBU] {70cd641bdabb8f17a977d855cc9c0477} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:08:49.981 [DEBU] {e416891bdabb8f17aa77d8551fa33a95} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:09:11.979 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:09:11.980 [DEBU] {809ac73adfbb8f17ac77d8556585c774} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:09:11.981 [DEBU] {b0c2d83adfbb8f17ad77d85549ece22f} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:10:57.278 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:10:57.280 [DEBU] admin_class_add.go:14: 388
+2023-10-20 14:10:57.280 [DEBU] admin_class_add.go:15: 3
+2023-10-20 14:10:57.280 [DEBU] admin_class_add.go:16: 10,11
+2023-10-20 14:22:24.376 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:22:29.557 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-20 14:22:29.561 [DEBU] {a06230ee98bc8f17b354aa39ea8ec52f} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 14:22:29.562 [DEBU] {4c4259ee98bc8f17b454aa39b293986f} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-20 14:23:10.343 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:23:10.344 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:23:10.347 [DEBU] {d0372f6da2bc8f17b654aa392b803d6b} [  3 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:23:10.347 [DEBU] {6cb2406da2bc8f17b854aa399ece58d0} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 14:23:10.350 [DEBU] {54f17d6da2bc8f17b954aa39484a3f69} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:23:10.350 [DEBU] {5cc8856da2bc8f17ba54aa39d7328d10} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:29:47.432 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:29:47.433 [DEBU] admin_class_add.go:15: 3208
+2023-10-20 14:29:47.434 [DEBU] admin_class_add.go:16: 3
+2023-10-20 14:29:47.437 [DEBU] admin_class_add.go:17: 10
+2023-10-20 14:29:47.476 [DEBU] {cc85d7e1febc8f17bc54aa39b437695c} [ 38 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class`(`teacher_id`,`class_number`) VALUES('3','3208') 
+2023-10-20 14:29:47.480 [DEBU] {ec0d37e4febc8f17bd54aa39c3e281b3} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 14:29:47.482 [ERRO] {c4ee5fe4febc8f17be54aa39b341a0f6} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES('{"Result":{"Locker":{}},"Affected":1}','10') 
+Error: Error 1366: Incorrect integer value: '{"Result":{"Locker":{}},"Affected":1}' for column 'class_id' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:28
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 14:29:51.405 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:29:51.405 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:29:51.407 [DEBU] {54a457ceffbc8f17c154aa39e97fe4c7} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:29:51.407 [DEBU] {d4e563ceffbc8f17c254aa397d02a5a7} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:29:51.408 [DEBU] {2cbc7bceffbc8f17c354aa3950b5136d} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:31:12.484 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:31:12.485 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:31:12.488 [DEBU] {285d22af12bd8f17c754aa39778e3d1a} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:31:12.503 [DEBU] {285d22af12bd8f17c654aa39bb5c9c98} [ 16 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:31:12.505 [DEBU] {40f92bb012bd8f17c854aa394281e5f0} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:31:28.288 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:31:28.291 [DEBU] {e8a1205d16bd8f17ca54aa39da2881c1} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:31:31.810 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:31:31.811 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:31:31.812 [DEBU] {a00afb2e17bd8f17cd54aa39cc5b2721} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:31:31.813 [DEBU] {a00afb2e17bd8f17ce54aa392ff3e4e2} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:31:31.813 [DEBU] {84730d2f17bd8f17cf54aa39f1c75396} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:32:03.002 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:32:03.004 [DEBU] {90b51f721ebd8f17d154aa39d7693509} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:32:05.856 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:32:05.856 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:32:05.857 [DEBU] {c8c5361c1fbd8f17d454aa399976ff87} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:32:05.858 [DEBU] {800a531c1fbd8f17d654aa3928463713} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:32:05.859 [DEBU] {c8c5361c1fbd8f17d554aa399e792049} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:32:32.781 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:32:32.785 [DEBU] {44f13e6125bd8f17d854aa399e5c5bed} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:32:39.190 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:32:39.193 [DEBU] {d01929df26bd8f17da54aa39d64a13e6} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:32:46.226 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:32:46.228 [DEBU] {84407c8228bd8f17dc54aa39581efa01} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:09.819 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:09.822 [DEBU] {a8fdc1002ebd8f17de54aa39168213a9} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:15.984 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:15.985 [DEBU] {a8a332702fbd8f17e054aa396984eb36} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:30.687 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:30.688 [DEBU] {30b68cdc32bd8f17e254aa3975f0a237} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:44.698 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:44.700 [DEBU] {acbcaa1f36bd8f17e454aa3944edc093} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:49.523 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:49.525 [DEBU] {608e4a3f37bd8f17e654aa3931e22c2d} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:33:55.064 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:33:55.066 [DEBU] {0824998938bd8f17e854aa390bde3e7d} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:34:23.680 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:34:23.682 [DEBU] {14b433333fbd8f17ea54aa39315f0362} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:34:31.940 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:34:31.947 [DEBU] {e059dd1f41bd8f17ec54aa39397139c1} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:34:46.030 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:34:46.031 [DEBU] {d06b546744bd8f17ee54aa39f7be29dc} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:34:50.118 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:34:50.119 [DEBU] {e4e9045b45bd8f17f054aa39a75ff84c} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:34:57.262 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:34:57.278 [DEBU] {a0e0640547bd8f17f254aa3993a9aa73} [  6 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:36:48.061 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:36:48.065 [DEBU] {e47712d160bd8f17f454aa39f3f8326a} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:37:43.509 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:37:43.513 [DEBU] {0006f0b96dbd8f17f654aa39f273b689} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:38:17.018 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:38:17.020 [DEBU] {e4b32e8775bd8f17f854aa39f7935259} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:38:22.333 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:38:22.333 [DEBU] {f047fbc376bd8f17fa54aa3962da1a14} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:38:29.519 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:38:29.522 [DEBU] {c850677078bd8f17fc54aa39f1d5ecc9} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:42:49.171 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:42:49.172 [DEBU] admin_class_add.go:15: 302
+2023-10-20 14:42:49.173 [DEBU] admin_class_add.go:16: 6
+2023-10-20 14:42:49.173 [DEBU] admin_class_add.go:17: 10
+2023-10-20 14:42:49.176 [DEBU] {589befe4b4bd8f1783fa370fccf3ba9d} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 14:42:49.208 [DEBU] {d8d322e5b4bd8f1784fa370f090e1bc1} [ 31 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class`(`class_number`,`teacher_id`) VALUES('302','6') 
+2023-10-20 14:42:49.210 [DEBU] {386205e7b4bd8f1785fa370fc6fff4ce} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 14:42:49.212 [ERRO] {60e31fe7b4bd8f1786fa370fd2c38c35} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`user_id`,`class_id`) VALUES('10','{"Result":{"Locker":{}},"Affected":1}') 
+Error: Error 1366: Incorrect integer value: '{"Result":{"Locker":{}},"Affected":1}' for column 'class_id' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:35
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 14:42:53.285 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:42:53.285 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:42:53.286 [DEBU] {d4e500dab5bd8f1789fa370fdd21a381} [  0 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 14:42:53.289 [DEBU] {34ab1cdab5bd8f178afa370f222ea08e} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:42:53.289 [DEBU] {34ab1cdab5bd8f178bfa370f331b253e} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:42:53.294 [DEBU] {b4c261dab5bd8f178cfa370fa0f729a6} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:51:30.595 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 14:51:30.598 [DEBU] admin_class_add.go:15: 308
+2023-10-20 14:51:30.598 [DEBU] admin_class_add.go:16: 4
+2023-10-20 14:51:30.599 [DEBU] admin_class_add.go:17: 10
+2023-10-20 14:51:30.605 [DEBU] {74d3874c2ebe8f1761ec3438f200b2af} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 14:51:30.636 [DEBU] {c044ac4c2ebe8f1762ec3438f7784d90} [ 30 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class`(`teacher_id`,`class_number`) VALUES('4','308') 
+2023-10-20 14:51:30.686 [DEBU] {f8fe854e2ebe8f1763ec3438515f9680} [ 49 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 14:51:30.715 [DEBU] {745d85512ebe8f1764ec34389b419cb5} [ 28 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(4,'10') 
+2023-10-20 14:51:34.622 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 14:51:34.623 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 14:51:34.623 [DEBU] {1cd31c3c2fbe8f1767ec34383c12eb58} [  0 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 14:51:34.625 [DEBU] {5c2a353c2fbe8f1768ec3438804ee915} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 14:51:34.627 [DEBU] {1c45553c2fbe8f176aec3438b55961d4} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 14:51:34.628 [DEBU] {5c2a353c2fbe8f1769ec3438746cd9fa} [  4 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 14:59:11.767 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-20 14:59:11.770 [DEBU] {507318ac99be8f176dec343815e5ef97} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-20 15:07:32.956 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 15:07:32.956 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 15:07:32.960 [DEBU] {84c44e5d0ebf8f1770ec34381a8a2187} [  3 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 15:07:32.969 [DEBU] {98ecf35d0ebf8f1772ec3438c408c59f} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 15:07:32.974 [DEBU] {a43a595d0ebf8f1771ec34385fef1014} [ 16 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 15:10:41.257 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 15:10:41.257 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 15:10:41.259 [DEBU] {f45ae0343abf8f1776ec3438a2870ea1} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 15:10:41.259 [DEBU] {f45ae0343abf8f1775ec34388811bebb} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 15:10:41.260 [DEBU] {d0f306353abf8f1777ec343816574e3b} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 15:32:21.167 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details
+2023-10-20 15:40:29.904 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 15:40:29.904 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 15:40:29.908 [DEBU] {6ceca2a8dac08f175be6c8775fe432ab} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 15:40:29.910 [DEBU] {ac4ecea8dac08f175ce6c877e9b93ae1} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 15:40:29.911 [DEBU] {a43ae5a8dac08f175de6c877bd201743} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 15:40:29.913 [DEBU] {a43ae5a8dac08f175ee6c877e875a8cb} [  3 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 15:40:29.913 [DEBU] {fcdefca8dac08f175fe6c87742f1be70} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 15:40:31.529 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details
+2023-10-20 15:45:24.450 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details
+2023-10-20 15:45:24.455 [DEBU] {d8b8093d1fc18f1739e56407009b90c3} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 15:45:24.456 [DEBU] {2c372d3d1fc18f173ae56407b8a217f9} [  0 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 15:45:24.472 [DEBU] {54c83c3d1fc18f173be56407857e1bcd} [ 15 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id` IS NULL
+2023-10-20 15:46:11.987 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 15:46:12.028 [DEBU] {f4f1a04f2ac18f1718f2c8238fe00b7c} [ 18 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 15:46:12.036 [DEBU] {50eae1502ac18f1719f2c823f151864c} [  5 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 15:46:12.038 [DEBU] {f87643512ac18f171af2c82308d48844} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 15:46:19.853 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 15:46:19.853 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 15:46:19.854 [DEBU] {24f619232cc18f171ff2c8231b48693f} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 15:46:19.855 [DEBU] {24f619232cc18f1720f2c823103a3969} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 15:46:19.857 [DEBU] {107b4e232cc18f1721f2c8238ce8cffe} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 15:46:19.857 [DEBU] {107b4e232cc18f1722f2c823ea068894} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 15:46:21.434 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 15:46:21.476 [DEBU] {8c145d812cc18f1725f2c8237c457ca0} [ 41 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:04:35.890 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:04:35.897 [DEBU] {0cfb37542bc28f17420936203654fe99} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 16:04:35.899 [DEBU] {a41d6e542bc28f1743093620d801cb70} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 16:04:35.900 [DEBU] {04288b542bc28f17440936204f07c73f} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:10:52.333 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:10:52.336 [DEBU] {5c8ed9f982c28f1746093620d4ec772b} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:19:18.971 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:19:18.974 [DEBU] {e007caeff8c28f174809362014b2e3c5} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:19:29.059 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-20 16:19:29.061 [DEBU] {9ca71249fbc28f174a093620a361ba9e} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-20 16:19:42.172 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:19:42.172 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:19:42.174 [DEBU] {b8c2a756fec28f174d093620e87055f7} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 16:19:42.175 [DEBU] {200fb756fec28f174e093620ffef8f17} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:19:42.177 [DEBU] {dc70d556fec28f1750093620e78b4b2e} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:19:42.178 [DEBU] {200fb756fec28f174f093620b6be6df5} [  4 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:19:48.809 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:19:48.811 [DEBU] {0c0746e2ffc28f17520936202797ae16} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:19:56.817 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:19:56.819 [DEBU] {c41e9cbf01c38f17540936208ededfc4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:20:02.236 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:20:02.237 [DEBU] {04e5880203c38f175609362020c6cb17} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:20:05.539 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:20:05.540 [DEBU] {14976fc703c38f1758093620052e20c8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:20:20.563 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:20:20.569 [DEBU] {048a0e4707c38f175a093620876214c8} [  3 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:22:00.018 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:22:00.021 [DEBU] {30dcfb6e1ec38f175c09362026f0bdb6} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:23:00.125 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:23:00.127 [DEBU] {3862a26d2cc38f175e093620f4b3b4ab} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:25:28.231 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:25:28.231 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:25:28.234 [DEBU] {ecd563e94ec38f17610936201af2e9c7} [  2 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:25:28.235 [DEBU] {3cae86e94ec38f17630936208c8236ce} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:25:28.254 [DEBU] {ecd563e94ec38f17620936209931649f} [ 22 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:25:29.552 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:25:29.553 [DEBU] {244121384fc38f1766093620a3601e4d} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:26:12.722 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:26:12.737 [DEBU] {70aaf94559c38f17680936206166f96e} [  2 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:26:28.920 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:26:28.935 [DEBU] {bc83830b5dc38f176a093620a8aac5fe} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:26:40.925 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:26:40.926 [DEBU] {78eb46d65fc38f176c093620ab77c2fb} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:26:58.537 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:26:58.540 [DEBU] {bc3e0ff063c38f176e093620f945e520} [  2 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:27:38.127 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:27:38.131 [DEBU] {8c34bd276dc38f1770093620a7c8b2ee} [  4 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:27:49.081 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:27:49.082 [DEBU] {70f2b3b46fc38f17720936208bfbf377} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:28:02.203 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:28:02.205 [DEBU] {88a2d0c272c38f1774093620fd27042e} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:29:08.646 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:29:08.649 [DEBU] {044f2f3b82c38f177609362042cd8a60} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:29:28.286 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:29:28.293 [DEBU] {d4e922ce86c38f177809362094ae5426} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:29:35.975 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:29:35.979 [DEBU] {444d299888c38f177a093620cd030d34} [  2 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:29:41.195 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:29:41.195 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:29:41.199 [DEBU] {f0de35cf89c38f177d09362049441bc6} [  3 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:29:41.200 [DEBU] {cc183ecf89c38f177e093620eda8204a} [  4 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:29:41.208 [DEBU] {9cd9e3cf89c38f177f093620841afec2} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:29:42.485 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 16:29:42.486 [DEBU] {0c7c161c8ac38f17820936203ed98693} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 16:29:44.256 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:29:44.256 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:29:44.257 [DEBU] {78fbac858ac38f1786093620fee9a084} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:29:44.257 [DEBU] {5cbba4858ac38f1785093620f156c77d} [  0 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:29:44.259 [DEBU] {149bbc858ac38f17870936201e6d4973} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:29:45.926 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:29:45.928 [DEBU] {d4fc36e98ac38f1789093620e009df53} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:29:47.095 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:29:47.095 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:29:47.096 [DEBU] {340edf2e8bc38f178c09362050d707d2} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:29:47.097 [DEBU] {8c25e82e8bc38f178d093620c27360bc} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:29:47.098 [DEBU] {f420f82e8bc38f178e093620e7dc8cd4} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:29:47.855 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 16:29:47.856 [DEBU] {bcc5355c8bc38f1790093620846bf657} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 16:29:49.053 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:29:49.053 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:29:49.054 [DEBU] {102d92a38bc38f1793093620900ecca0} [  0 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:29:49.055 [DEBU] {4c40a2a38bc38f1794093620f441f3d3} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:29:49.057 [DEBU] {e4ccbea38bc38f17950936202e419da0} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:37:43.586 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 16:37:43.590 [DEBU] {a8350b20fac38f17970936206ffe89a0} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 16:37:45.483 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:37:45.483 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:37:45.484 [DEBU] {dc47fe90fac38f179a093620387bd2dd} [  1 ms] [default] [StudentManagementSystem] [rows:31 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:37:45.485 [DEBU] {f8870691fac38f179b0936207d65d799} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:37:45.485 [DEBU] {606a1691fac38f179c09362032af2267} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:37:47.630 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:37:47.632 [DEBU] {acde0211fbc38f179e09362050472aca} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:42:35.969 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:42:35.971 [DEBU] {f4eb56333ec48f17a0093620a472d163} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:46:15.963 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:46:15.967 [DEBU] {407e1b6c71c48f174bde61253da82ffd} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 16:46:15.968 [DEBU] {58503b6c71c48f174cde6125575482d5} [  0 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 16:46:15.969 [DEBU] {dcf34a6c71c48f174dde6125354a9d4a} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:46:35.028 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/delete_user
+2023-10-20 16:46:35.032 [DEBU] {34d871dc75c48f17df96fc3250f59ede} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 16:46:35.070 [DEBU] {244f92dc75c48f17e096fc32b0993fb5} [ 38 ms] [default] [StudentManagementSystem] [rows:1  ] DELETE FROM `class_user` WHERE `user_id`='9'
+2023-10-20 16:46:39.268 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:46:39.271 [DEBU] {dca32dd976c48f17e296fc32534b3562} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 16:46:39.272 [DEBU] {483a44d976c48f17e396fc32592accf7} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:47:32.044 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:47:32.047 [DEBU] {903ed42283c48f17e596fc32fcb6cad7} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:47:37.473 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:47:37.473 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:47:37.476 [DEBU] {14c0616684c48f17e896fc3288a37a61} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:47:37.478 [DEBU] {14c0616684c48f17e996fc32f5f8afdb} [  4 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 16:47:37.479 [DEBU] {647aa26684c48f17ea96fc329d1170e9} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:47:37.479 [DEBU] {647aa26684c48f17eb96fc320f615cb6} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:47:40.601 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 16:47:40.603 [DEBU] {ec81df2085c48f17ed96fc32a3e1dee3} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 16:47:43.417 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:47:43.417 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:47:43.418 [DEBU] {c076afc885c48f17f196fc327f0e851c} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:47:43.419 [DEBU] {c076afc885c48f17f096fc32e710d99b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:47:43.423 [DEBU] {2057ecc885c48f17f296fc328b14f64b} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:49:26.831 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 16:49:26.834 [DEBU] {945a9edc9dc48f17f496fc32d470caf9} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 16:49:44.387 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:49:44.387 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:49:44.388 [DEBU] {14ae0af3a1c48f17f796fc3297b4c2a9} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:49:44.390 [DEBU] {14ae0af3a1c48f17f896fc32d2f0c595} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:49:44.392 [DEBU] {98c046f3a1c48f17f996fc32b9a264fb} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:49:46.821 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:49:46.823 [DEBU] {84d22a84a2c48f17fb96fc32dd6c09e9} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:49:48.373 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:49:48.374 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:49:48.374 [DEBU] {bcac8ee0a2c48f17fd96fc32a386bf52} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:49:48.380 [DEBU] {2cb1f1e0a2c48f17ff96fc328baea6af} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:49:48.382 [DEBU] {409f12e1a2c48f170097fc32a4e5120e} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:50:14.854 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 16:50:14.855 [DEBU] {f806fa0aa9c48f170297fc326e2ef45f} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 16:50:17.321 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:50:17.322 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:50:17.323 [DEBU] {24ed1c9ea9c48f170597fc322e330748} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:50:17.324 [DEBU] {24ed1c9ea9c48f170697fc32027e15fd} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:50:17.324 [DEBU] {b0dc2d9ea9c48f170797fc323771fbdf} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:50:18.531 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 16:50:18.532 [DEBU] {18ca30e6a9c48f170997fc32936b68cc} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 16:50:19.691 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:50:19.691 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:50:19.692 [DEBU] {bc4c512baac48f170c97fc32470a6ec7} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:50:19.693 [DEBU] {08735c2baac48f170d97fc327c4025cf} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:50:19.697 [DEBU] {c0dd932baac48f170e97fc32856b4ab0} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:50:20.790 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 16:50:20.791 [DEBU] {545fce6caac48f171097fc328e330b32} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 16:50:22.566 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:50:22.566 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:50:22.567 [DEBU] {f489b2d6aac48f171397fc323ce599fd} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:50:22.568 [DEBU] {f489b2d6aac48f171497fc3232b62a19} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:50:22.577 [DEBU] {286c46d7aac48f171597fc3226ca7a61} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:50:23.515 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 16:50:23.517 [DEBU] {9c7c430fabc48f171797fc32e95d8fbb} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 16:50:25.091 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 16:50:25.092 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 16:50:25.093 [DEBU] {4861406dabc48f171a97fc32c9bd15bf} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 16:50:25.094 [DEBU] {4861406dabc48f171b97fc326a1b597f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 16:50:25.097 [DEBU] {985e7a6dabc48f171c97fc32840c8298} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 16:55:02.706 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 16:55:02.708 [DEBU] {18245110ecc48f171e97fc327b9ce91b} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 16:58:28.339 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 16:58:28.341 [DEBU] {087702f11bc58f172097fc328dae02a2} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:00:46.093 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:00:46.095 [DEBU] {84a3d1033cc58f172297fc322b2001fe} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:00:46.097 [DEBU] {c484ec033cc58f172397fc320fcd61aa} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:01:13.074 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:01:13.076 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:01:13.076 [DEBU] {8cc50d4c42c58f172597fc3269243167} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:01:13.077 [DEBU] {5cd11d4c42c58f172797fc3285163b79} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:01:13.078 [DEBU] {502b204c42c58f172897fc3286103615} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:01:31.962 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:01:31.968 [DEBU] {0c73d0b146c58f172a97fc328cc3f49a} [  5 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:01:31.997 [DEBU] {602ec9b346c58f172b97fc322456f5f2} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:01:44.785 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:01:44.788 [DEBU] {587d2aae49c58f172d97fc32232381f4} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:01:44.789 [DEBU] {5c3f50ae49c58f172e97fc328ca22d39} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:02:15.557 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:02:15.560 [DEBU] {1c4153d850c58f173097fc329ac13c4b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:02:15.562 [DEBU] {b47879d850c58f173197fc32eb576f2c} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:02:16.619 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:02:16.620 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:02:16.622 [DEBU] {18199f1751c58f173497fc32b666943f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:02:16.622 [DEBU] {708fad1751c58f173597fc32560e0558} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:02:16.631 [DEBU] {a866391851c58f173697fc3220bd540a} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:02:21.339 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:02:21.339 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:02:21.340 [DEBU] {a4c7e53052c58f173997fc32568d8afe} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:02:21.342 [DEBU] {a8c0ed3052c58f173a97fc32f7c75f86} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:02:21.351 [DEBU] {04fe803152c58f173b97fc32aae30a52} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:02:33.815 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:02:33.816 [DEBU] {6c68831855c58f173d97fc32cbfa8c4b} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:02:33.818 [DEBU] {849d9f1855c58f173e97fc32cf33697b} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:03:18.488 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:03:18.492 [DEBU] {988d487f5fc58f174097fc32d46a9b1e} [  3 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:03:18.495 [DEBU] {14f6817f5fc58f174197fc321dfa5914} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:04:06.233 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:04:06.235 [DEBU] {74db099d6ac58f174397fc32467c8087} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:04:06.236 [DEBU] {fcf8319d6ac58f174497fc324e7a4cde} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:04:30.328 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:04:30.331 [DEBU] {a467563970c58f174697fc3204b4f28a} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:04:30.342 [DEBU] {ccf9ff3970c58f174797fc321f5ba6f8} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:04:36.673 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:04:36.675 [DEBU] {28306bb371c58f174997fc3273314714} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:04:36.676 [DEBU] {b08f88b371c58f174a97fc32c3dd6cc5} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:04:45.045 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 17:04:45.046 [DEBU] admin_class_add.go:15:
+2023-10-20 17:04:45.047 [DEBU] admin_class_add.go:16:
+2023-10-20 17:04:45.048 [DEBU] admin_class_add.go:17: 9,11,13,14,12
+2023-10-20 17:04:45.049 [ERRO] {b0419ba673c58f174d97fc32a7ad21c5} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class`(`class_number`,`teacher_id`) VALUES('','') 
+Error: Error 1366: Incorrect integer value: '' for column 'class_number' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:19
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:04:45.055 [DEBU] admin_class_add.go:24: Error 1366: Incorrect integer value: '' for column 'class_number' at row 1, INSERT INTO `class`(`class_number`,`teacher_id`) VALUES('','') 
+2023-10-20 17:05:42.434 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 17:06:43.971 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:06:43.974 [DEBU] {f4fe0e578fc58f17a7631f55533890df} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 17:06:43.975 [DEBU] {206630578fc58f17a8631f559645cdf2} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:06:43.976 [DEBU] {0c0140578fc58f17a9631f5550cf88e9} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:08:03.554 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:08:03.554 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:08:03.557 [DEBU] {1cb285dea1c58f17ad631f5571bcc8ff} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 17:08:03.557 [DEBU] {88d07ddea1c58f17ac631f554cd07898} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:08:03.558 [DEBU] {5877a2dea1c58f17ae631f550e54552e} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:08:03.558 [DEBU] {80b5aadea1c58f17af631f55d38ce325} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:12:35.047 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:12:35.051 [DEBU] {708bd814e1c58f176d1cd71af6ecedda} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 17:12:35.055 [DEBU] {a01d0215e1c58f176e1cd71a1875a892} [  3 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:12:35.057 [DEBU] {c4f43d15e1c58f176f1cd71a95dcc57b} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:12:37.325 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:12:37.326 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:12:37.327 [DEBU] {a022899ce1c58f17711cd71a1e8c903e} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:12:37.328 [DEBU] {f0ef989ce1c58f17731cd71a80ad0bad} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 17:12:37.329 [DEBU] {f80ca69ce1c58f17741cd71a290e1f0c} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:12:37.331 [DEBU] {f80ca69ce1c58f17751cd71afcb7454e} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:12:57.329 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:12:57.330 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:12:57.331 [DEBU] {7888e944e6c58f17781cd71a696bce61} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:12:57.333 [DEBU] {007ff244e6c58f17791cd71a6e0a3564} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 17:12:57.333 [DEBU] {4cae0845e6c58f177b1cd71adcdac79f} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:12:57.334 [DEBU] {4cae0845e6c58f177a1cd71a31d14989} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:12:58.854 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:12:58.854 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:12:58.856 [DEBU] {543fc49fe6c58f177e1cd71abd04fb52} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:12:58.857 [DEBU] {14f0cb9fe6c58f177f1cd71af901330b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:12:58.859 [DEBU] {8cf7ec9fe6c58f17801cd71a1996fafe} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:01.229 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:01.232 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:13:01.232 [DEBU] {ccde6e2de7c58f17821cd71a5f51d54d} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:01.234 [DEBU] {f0bf872de7c58f17841cd71ac40f76d5} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:13:01.235 [DEBU] {705b9e2de7c58f17851cd71a401b3641} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:15.711 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:13:15.711 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:15.714 [DEBU] {e848868ceac58f17881cd71a4acf9963} [  2 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:13:15.715 [DEBU] {103e968ceac58f17891cd71a4cee4ef1} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:15.716 [DEBU] {ac4ec18ceac58f178a1cd71aa3711ed4} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:16.909 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:16.909 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:13:16.910 [DEBU] {1c75e3d3eac58f178d1cd71ad5250107} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:16.911 [DEBU] {1c75e3d3eac58f178e1cd71aa729fa05} [  2 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:13:16.911 [DEBU] {3cc3fcd3eac58f178f1cd71af4076acc} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:18.327 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:18.327 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 17:13:18.329 [DEBU] {74c27528ebc58f17921cd71a50a2358f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:18.330 [DEBU] {40a37d28ebc58f17931cd71a60a46bc4} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 17:13:18.330 [DEBU] {2ced8d28ebc58f17941cd71aa3a6813b} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:22.101 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:22.102 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=3
+2023-10-20 17:13:22.103 [DEBU] {8c7d6b09ecc58f17971cd71a3250249c} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:22.103 [DEBU] {8c7d6b09ecc58f17981cd71a87d4b317} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='3'
+2023-10-20 17:13:22.103 [DEBU] {48207b09ecc58f17991cd71a7fdee0a3} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:24.225 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:24.226 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:13:24.227 [DEBU] {24211088ecc58f179d1cd71a43dfb2cb} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:13:24.227 [DEBU] {5cba0788ecc58f179c1cd71ac8e10725} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:24.229 [DEBU] {e0592088ecc58f179e1cd71aa8013a7f} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:25.413 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:25.414 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 17:13:25.415 [DEBU] {202be1ceecc58f17a21cd71a46a16556} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 17:13:25.429 [DEBU] {cce3d1ceecc58f17a11cd71ae1ec93d7} [ 15 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:25.431 [DEBU] {ec6ec6cfecc58f17a31cd71ac123a902} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:27.599 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:27.600 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=4
+2023-10-20 17:13:27.601 [DEBU] {24a21a51edc58f17a61cd71a65adb6e8} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:27.601 [DEBU] {903b2451edc58f17a71cd71a55695702} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='4'
+2023-10-20 17:13:27.602 [DEBU] {bc5e2f51edc58f17a81cd71af9ba7eb4} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:30.626 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:30.626 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:13:30.628 [DEBU] {140d8305eec58f17ab1cd71a9c5868ab} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:30.629 [DEBU] {a02c8c05eec58f17ac1cd71ae0a27357} [  2 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:13:30.629 [DEBU] {fc499f05eec58f17ad1cd71a4af07ec5} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:31.534 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:31.535 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:13:31.536 [DEBU] {b4c4b33beec58f17b11cd71ac299cb8b} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:13:31.536 [DEBU] {1891ab3beec58f17b01cd71a7832f8ab} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:31.546 [DEBU] {14f8423ceec58f17b21cd71a24ff69e7} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:13:37.405 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add_user
+2023-10-20 17:13:37.469 [DEBU] {f834a599efc58f17b51cd71afec44f21} [ 62 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES('2','2') 
+2023-10-20 17:13:40.806 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:13:40.806 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:13:40.807 [DEBU] {80b03f64f0c58f17b81cd71a1e29172b} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:13:40.808 [DEBU] {ac6f4a64f0c58f17b91cd71a4e8facb8} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:13:40.808 [DEBU] {18f05364f0c58f17ba1cd71a42d9e98b} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:14:55.867 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:14:55.867 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:14:55.873 [DEBU] {548c68de01c68f17157e583b8261f5b8} [  3 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 17:14:55.874 [DEBU] {74899bde01c68f17167e583b7eb529c1} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 17:14:55.875 [DEBU] {481db1de01c68f17177e583b98260daa} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:14:55.876 [DEBU] {481db1de01c68f17187e583bc5de036f} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:14:55.877 [DEBU] {1016c3de01c68f17197e583b28c46841} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:14:57.664 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:14:57.664 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=1
+2023-10-20 17:14:57.666 [DEBU] {b0105e4902c68f171c7e583b2118da9f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:14:57.666 [DEBU] {b0105e4902c68f171d7e583bd9570e78} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 17:14:57.668 [DEBU] {0c827c4902c68f171f7e583bf7e23ca5} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-20 17:14:57.668 [DEBU] {0c827c4902c68f171e7e583b68530bb0} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:14:58.668 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:14:58.668 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:14:58.669 [DEBU] {f4b5388502c68f17227e583b3de6a2d5} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:14:58.669 [DEBU] {5c96408502c68f17237e583bd52cdf01} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:14:58.678 [DEBU] {40dbbc8502c68f17247e583ba074dbfd} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:14:59.454 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:14:59.454 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:14:59.456 [DEBU] {747718b402c68f17277e583b60feb20f} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:14:59.457 [DEBU] {747718b402c68f17287e583bab26a963} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:14:59.458 [DEBU] {20af2ab402c68f17297e583b1492d3f0} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:15:00.952 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/delete_user
+2023-10-20 17:15:00.991 [DEBU] {f4e15b0d03c68f172b7e583b01d9bb50} [ 38 ms] [default] [StudentManagementSystem] [rows:1  ] DELETE FROM `class_user` WHERE `user_id`='2'
+2023-10-20 17:15:04.285 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:15:04.285 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:15:04.286 [DEBU] {60eb05d403c68f172e7e583b018d9ab7} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:15:04.287 [DEBU] {60eb05d403c68f172f7e583b96720b59} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:15:04.287 [DEBU] {f08c15d403c68f17307e583bc9d924f3} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:15:11.194 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add_user
+2023-10-20 17:15:11.195 [DEBU] admin_class_add_user.go:18: 2
+2023-10-20 17:15:11.196 [DEBU] admin_class_add_user.go:19: 2
+2023-10-20 17:15:11.228 [DEBU] {9cabf86f05c68f17327e583bc244d79e} [ 31 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES('2','2') 
+2023-10-20 17:15:15.322 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:15:15.323 [DEBU] {180de36506c68f17347e583ba97fe91d} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:15:15.325 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:15:15.325 [DEBU] {4cb5f26506c68f17357e583be5b4e831} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:15:15.326 [DEBU] {b4c50b6606c68f17377e583be2de76be} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:15:20.857 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/delete_user
+2023-10-20 17:15:20.898 [DEBU] {a4fcd5af07c68f17397e583bddceb32d} [ 39 ms] [default] [StudentManagementSystem] [rows:1  ] DELETE FROM `class_user` WHERE `user_id`='2'
+2023-10-20 17:15:24.187 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:15:24.187 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:15:24.188 [DEBU] {505b457608c68f173c7e583b294e47f9} [  0 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:15:24.188 [DEBU] {a0714d7608c68f173d7e583ba7de3ffb} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:15:24.190 [DEBU] {7899667608c68f173e7e583bd0066c07} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:15:34.154 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:15:34.156 [DEBU] {f4fa5cc80ac68f17407e583b508fd798} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:15:34.157 [DEBU] {74097ec80ac68f17417e583b91e50f89} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:16:07.306 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add_user
+2023-10-20 17:16:07.307 [DEBU] admin_class_add_user.go:17: 2
+2023-10-20 17:16:07.308 [DEBU] admin_class_add_user.go:18: 2
+2023-10-20 17:16:11.664 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/details?class_id=2
+2023-10-20 17:16:11.664 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:16:11.671 [DEBU] {34fd6e8413c68f17a009a775f07fa0f0} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 17:16:11.673 [DEBU] {9c6c8d8413c68f17a109a77530bf1566} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-20 17:16:11.674 [DEBU] {88a39c8413c68f17a209a77551b96ddb} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:16:11.676 [DEBU] {4815bb8413c68f17a409a77591a9ed17} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:16:11.676 [DEBU] {88a39c8413c68f17a309a7754e6180a2} [  3 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT user.id,user.username,user.phone FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-20 17:16:29.218 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:16:29.220 [DEBU] {e017709a17c68f17a609a7751fa82509} [  1 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:16:29.221 [DEBU] {642e8a9a17c68f17a709a775eee70be9} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:16:30.237 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/get_class_select_user_info
+2023-10-20 17:16:30.237 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:16:30.239 [DEBU] {04e91fd717c68f17aa09a775e25c96a4} [  2 ms] [default] [StudentManagementSystem] [rows:32 ] SELECT `id`,`username` FROM `user` WHERE (`role`=1) AND ((select count(1) from class_user where user.id=class_user.user_id)=0)
+2023-10-20 17:16:30.239 [DEBU] {285b3ed717c68f17ab09a775bb474012} [  0 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 17:16:30.240 [DEBU] {40934dd717c68f17ac09a7751145613a} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:16:30.241 [DEBU] {40934dd717c68f17ad09a7755011ea49} [  0 ms] [default] [StudentManagementSystem] [rows:7  ] SELECT `id`,`username` FROM `user` WHERE `role`=2
+2023-10-20 17:16:46.787 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 17:16:46.827 [DEBU] {4029a2b11bc68f17af09a775ed67ad56} [ 39 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class`(`class_number`,`teacher_id`) VALUES('398','6') 
+2023-10-20 17:16:46.849 [DEBU] {ec3906b41bc68f17b009a77546c7e524} [ 21 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class_user`(`user_id`,`class_id`) VALUES('16',5) 
+2023-10-20 17:16:46.851 [ERRO] {18bf4eb51bc68f17b109a775545c43d4} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(5,'14') 
+Error: Error 1062: Duplicate entry '5' for key 'PRIMARY'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:40
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:16:46.857 [ERRO] {b057b4b51bc68f17b209a7758387b950} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(5,'13') 
+Error: Error 1062: Duplicate entry '5' for key 'PRIMARY'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:40
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:16:46.862 [ERRO] {304500b61bc68f17b309a775ba8674e6} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(5,'16,14,13') 
+Error: Error 1265: Data truncated for column 'user_id' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:47
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:16:46.867 [DEBU] admin_class_add.go:52: Error 1265: Data truncated for column 'user_id' at row 1, INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(5,'16,14,13') 
+2023-10-20 17:17:40.988 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/list
+2023-10-20 17:17:40.990 [DEBU] {78883c5028c68f17b509a7758e041e68} [  1 ms] [default] [StudentManagementSystem] [rows:5  ] SELECT class.class_number,user.username,class.id as class_id FROM `class` LEFT JOIN `user` ON (class.teacher_id=user.id)
+2023-10-20 17:18:30.251 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/class/add
+2023-10-20 17:18:30.252 [DEBU] admin_class_add.go:20: 398
+2023-10-20 17:18:30.253 [DEBU] admin_class_add.go:21: 6
+2023-10-20 17:18:30.253 [DEBU] admin_class_add.go:22: 16,14,13
+2023-10-20 17:18:30.257 [DEBU] {d48ec4c833c68f17ec223960a3ee8fc0} [  2 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `class`
+2023-10-20 17:18:30.299 [DEBU] {8c35f2c833c68f17ed223960853b7c27} [ 40 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class`(`class_number`,`teacher_id`) VALUES('398','6') 
+2023-10-20 17:18:30.349 [DEBU] {e0e860cb33c68f17ee2239600ebe2772} [ 50 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-20 17:18:30.370 [DEBU] {e83860ce33c68f17ef2239606f63d8ad} [ 20 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(6,'16') 
+2023-10-20 17:18:30.371 [ERRO] {08f0a0cf33c68f17f02239604f136af2} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(6,'14') 
+Error: Error 1062: Duplicate entry '6' for key 'PRIMARY'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:40
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:18:30.376 [ERRO] {c4a1eccf33c68f17f1223960041f6d22} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(6,'13') 
+Error: Error 1062: Duplicate entry '6' for key 'PRIMARY'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:40
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:18:30.383 [ERRO] {f8e253d033c68f17f222396049b960e3} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(6,'16,14,13') 
+Error: Error 1265: Data truncated for column 'user_id' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_core.go:440
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:193
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/database/gdb/gdb_model_insert.go:191
+9.  server/api/v1/service/admin/admin_class.(*AdminClass).AdminClassAdd
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/admin/admin_class/admin_class_add.go:47
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:131
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:90
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:89
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+18. server/api/v1/service/middleware.(*Middleware).UserAuthentication
+    G:/doc/code/my_project/StudentManagementSystem/server/api/v1/service/middleware/user_authentication.go:22
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+24. server/internal/cmd.glob..func1.2
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:25
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+30. server/internal/cmd.glob..func1.1
+    G:/doc/code/my_project/StudentManagementSystem/server/internal/cmd/cmd.go:21
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    C:/Users/王尼玛/go/pkg/mod/github.com/gogf/gf/v2@v2.2.6/net/ghttp/ghttp_server_handler.go:132
+
+2023-10-20 17:18:30.387 [DEBU] admin_class_add.go:52: Error 1265: Data truncated for column 'user_id' at row 1, INSERT INTO `class_user`(`class_id`,`user_id`) VALUES(6,'16,14,13') 

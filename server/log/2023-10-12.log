@@ -1,0 +1,173 @@
+2023-10-12 09:52:13.548 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 09:52:13.610 [DEBU] {682b4fce34398d178580ad3ea3edacb6} [ 60 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 09:52:13.611 [DEBU] {a465e9d134398d178680ad3e342988c7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 09:52:13.613 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 09:52:13.615 [DEBU] {8c6d12d234398d178880ad3e24ca9c0c} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 09:52:13.617 [DEBU] {64eb3ed234398d178980ad3ee98dafda} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 09:52:16.806 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 09:52:16.807 [DEBU] {e847689035398d178b80ad3e7f2d24d9} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 09:52:16.809 [DEBU] {2c887a9035398d178c80ad3e61f965df} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 09:52:16.810 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 09:52:16.811 [DEBU] {c4b7999035398d178e80ad3e69518011} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 09:52:16.812 [DEBU] {f4bcb49035398d178f80ad3e501d0b3f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 09:57:44.138 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 09:57:44.140 [DEBU] {d00cf2c681398d179180ad3ee56adb33} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 09:57:44.141 [DEBU] {60af05c781398d179280ad3ecdde557c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:01:56.090 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:01:56.133 [DEBU] {dc387670bc398d179bd2f85236143b8c} [ 41 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-12 10:01:56.134 [DEBU] {e412fb72bc398d179cd2f85293c450b9} [  0 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-12 10:01:56.188 [DEBU] {9cf10e73bc398d179dd2f852a1698cce} [ 53 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:01:56.195 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:01:56.203 [DEBU] {c4ecec76bc398d179fd2f85281b1f4c0} [  3 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:05:37.749 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:05:37.989 [DEBU] {34155e0cf0398d17a1d2f8525fee145e} [239 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:05:40.633 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:05:40.635 [DEBU] {780848b8f0398d17a3d2f8524c25fb67} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:06:05.703 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:06:05.704 [DEBU] {e095858ef6398d17a5d2f85252e71d20} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:09:20.492 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:09:20.495 [DEBU] {347ad9e8233a8d17a7d2f852f506dddb} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT * FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:09:36.148 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:09:36.152 [DEBU] {2caf1c8e273a8d179f13f6703e5bd793} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-12 10:09:36.154 [DEBU] {a0584a8e273a8d17a013f67054e28e3e} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-12 10:09:36.155 [DEBU] {8c8f598e273a8d17a113f670dc2bbe0f} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:09:44.430 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:09:44.432 [DEBU] {d07ab87b293a8d17a313f67039a3c7eb} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:09:52.702 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:09:52.724 [DEBU] {4cabfd692b3a8d17a513f6702f3e4ad2} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:10:33.623 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:10:33.628 [DEBU] {04b3d1ef343a8d17a713f67061b02f84} [  4 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='2'
+2023-10-12 10:10:38.917 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:10:38.918 [DEBU] {d404552b363a8d17a913f6702448e7ec} [  0 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-12 10:10:38.920 [DEBU] {2c386a2b363a8d17aa13f670fbc78572} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-12 10:10:38.921 [DEBU] {a024782b363a8d17ab13f670bde8f90c} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:10:38.921 [DEBU] {ccde872b363a8d17ac13f670daf9b6e9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:10:38.922 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:10:38.923 [DEBU] {1c0da52b363a8d17ae13f67016f0eb4c} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:10:38.924 [DEBU] {c0ccb42b363a8d17af13f6708598b3d6} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:10:40.979 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=1
+2023-10-12 10:10:40.980 [DEBU] {500a3aa6363a8d17b113f670734bfaed} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-12 10:10:40.981 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=1
+2023-10-12 10:10:40.983 [DEBU] {4cd964a6363a8d17b313f670c0e406e6} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE `class_user`.`class_id`='1'
+2023-10-12 10:11:27.275 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:27.278 [DEBU] {483dba6d413a8d17f56f1037459f71fa} [  2 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-12 10:11:27.279 [DEBU] {ecdee76d413a8d17f66f1037e396b5c3} [  0 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-12 10:11:27.280 [DEBU] {1015f76d413a8d17f76f103744286618} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:27.281 [DEBU] {1015f76d413a8d17f86f103779d3c2eb} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:27.282 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:27.284 [DEBU] {6cc2246e413a8d17fa6f10371cad55d1} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:27.285 [DEBU] {c833436e413a8d17fb6f1037956459d8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:28.895 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=1
+2023-10-12 10:11:28.897 [DEBU] {2c1647ce413a8d17fd6f10371f858b42} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-12 10:11:28.899 [DEBU] {58f365ce413a8d17fe6f10375a8ecc4c} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-12 10:11:28.900 [DEBU] {c4b974ce413a8d17ff6f10371fcdc580} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='1')
+2023-10-12 10:11:28.901 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=1
+2023-10-12 10:11:28.903 [DEBU] {7062a2ce413a8d170170103741228d4e} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='1')
+2023-10-12 10:11:30.915 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:30.918 [DEBU] {ec0cbd46423a8d1703701037f45252c4} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:30.919 [DEBU] {e02dd546423a8d17047010373f81340c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:30.920 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:30.922 [DEBU] {ac09fb46423a8d17067010377f304f37} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:30.923 [DEBU] {08c30d47423a8d1707701037256858a2} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:32.246 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:11:32.247 [DEBU] {905ff495423a8d1709701037e95af105} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='2')
+2023-10-12 10:11:32.249 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:11:32.252 [DEBU] {6c784096423a8d170b701037bd71dc24} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='2')
+2023-10-12 10:11:35.699 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:11:35.700 [DEBU] {98d6ce63433a8d170d7010370e4962bb} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:11:35.701 [DEBU] {e4a0e063433a8d170e701037eb1fd4ad} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:11:35.703 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:11:35.703 [DEBU] {08d60464433a8d17107010374f070b85} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:11:35.704 [DEBU] {4c861564433a8d171170103770de1677} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:11:38.287 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:38.294 [DEBU] {883e31fe433a8d1713701037cedc7797} [  4 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:38.295 [DEBU] {04747ffe433a8d17147010370fdd652d} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:38.298 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:38.300 [DEBU] {9c26d0fe433a8d1716701037895077dd} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:38.301 [DEBU] {945fd6fe433a8d1717701037d7794292} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:40.537 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:11:40.538 [DEBU] {24d82484443a8d1719701037bf90bf08} [  1 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='2')
+2023-10-12 10:11:40.539 [DEBU] cmd.go:24: RequestURL: /v1/web/class/details?id=2
+2023-10-12 10:11:40.540 [DEBU] {f4914a84443a8d171b7010370bf16129} [  0 ms] [default] [StudentManagementSystem] [rows:4  ] SELECT user.name,user.create_time FROM `class_user` LEFT JOIN `user` ON (class_user.user_id=user.id) WHERE (user.id > 1) AND (`class_user`.`class_id`='2')
+2023-10-12 10:11:55.890 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:11:55.892 [DEBU] {cc815517483a8d171d701037f70a6a81} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:11:55.893 [DEBU] {742d6b17483a8d171e701037f9737428} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:11:55.894 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:11:55.895 [DEBU] {c0cc7f17483a8d1720701037a322daad} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:11:55.896 [DEBU] {38089017483a8d17217010374f1b236c} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:11:58.399 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:58.400 [DEBU] {60b1d3ac483a8d172370103770a9555b} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:58.402 [DEBU] {e00ff0ac483a8d17247010375ded896f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:11:58.403 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:11:58.405 [DEBU] {7c8317ad483a8d1726701037b4f15af1} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:11:58.407 [DEBU] {588c3cad483a8d1727701037a6ea825e} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:17:28.494 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:17:28.496 [DEBU] {5c0c0988953a8d172970103704b1753d} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:17:28.497 [DEBU] {88b72788953a8d172a7010373dcfbc24} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:22:17.973 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:22:17.977 [DEBU] {086a69eed83a8d17e8c1f60a1dfab07a} [  2 ms] [default] [StudentManagementSystem] [rows:5  ] SHOW FULL COLUMNS FROM `class`
+2023-10-12 10:22:17.978 [DEBU] {0c188aeed83a8d17e9c1f60ae1e0a783} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SHOW FULL COLUMNS FROM `major`
+2023-10-12 10:22:17.979 [DEBU] {fc589aeed83a8d17eac1f60aebb8aedf} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:22:17.980 [DEBU] {1c65a5eed83a8d17ebc1f60aef35e145} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:22:19.395 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:22:19.396 [DEBU] {80061943d93a8d17edc1f60aae96d1d4} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:22:19.398 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:22:19.399 [DEBU] {2caf4643d93a8d17efc1f60a28e3c31b} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:23:24.134 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:23:24.136 [DEBU] {6481d955e83a8d17f1c1f60a41ecdd4e} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:24:12.132 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:24:12.136 [DEBU] {30e8dc82f33a8d17f3c1f60a5dbbfdd8} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:24:42.220 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:24:42.282 [DEBU] {34788a85fa3a8d17f5c1f60afa602468} [ 37 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:24:56.699 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:24:56.701 [DEBU] {e48417e3fd3a8d17f7c1f60a68ca738d} [  2 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:24:56.702 [DEBU] {e8ef3ee3fd3a8d17f8c1f60a5b595fad} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:24:56.704 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:24:56.705 [DEBU] {94d566e3fd3a8d17fac1f60a48e627c1} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:24:56.706 [DEBU] {a8fe79e3fd3a8d17fbc1f60a6fcfa93b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:24:58.841 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:24:58.842 [DEBU] {f85cce62fe3a8d17fdc1f60aac2ab844} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:24:58.843 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:24:58.844 [DEBU] {407de862fe3a8d17ffc1f60a7b8985ef} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:28:40.067 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:28:40.069 [DEBU] {0048e4e4313b8d1701c2f60a6874e2ab} [  1 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-12 10:28:40.104 [DEBU] {c8a40fe5313b8d1702c2f60afaa30355} [ 33 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:28:40.104 [DEBU] {a0320ce7313b8d1703c2f60aa641bcfa} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:28:40.106 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 10:28:40.107 [DEBU] {d87932e7313b8d1705c2f60ae75ab3f2} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 10:28:40.108 [DEBU] {98a942e7313b8d1706c2f60ad2560849} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 10:28:42.682 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:28:42.683 [DEBU] {2c70c680323b8d1708c2f60a7797ec73} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:28:42.684 [DEBU] {acbdd080323b8d1709c2f60a62a99ca1} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:28:42.685 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 10:28:42.686 [DEBU] {6c69f680323b8d170bc2f60a8850ca5d} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 10:28:42.687 [DEBU] {9488ff80323b8d170cc2f60a66168027} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 10:28:45.327 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:28:45.328 [DEBU] {a015691e333b8d170ec2f60a8c63791f} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:28:45.329 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:28:45.331 [DEBU] {fc63911e333b8d1710c2f60ad74c093d} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 10:29:01.187 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 10:29:01.189 [DEBU] {5493cdcf363b8d1712c2f60a1416259e} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 11:37:40.801 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 11:37:40.805 [DEBU] {0821e3fbf53e8d1714c2f60a84d277a6} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 11:37:44.300 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 11:37:44.305 [DEBU] {3049a8ccf63e8d1716c2f60a7b3f23f7} [  0 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 11:37:44.307 [DEBU] {84a6c4ccf63e8d1717c2f60aad2b8efe} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 11:37:44.309 [DEBU] cmd.go:24: RequestURL: /v1/web/class/list
+2023-10-12 11:37:44.310 [DEBU] {1474eeccf63e8d1719c2f60aa581ba06} [  1 ms] [default] [StudentManagementSystem] [rows:2  ] SELECT class.id,class.class_id,class.class_name,class.teacher,major.name,major.describe FROM `class` LEFT JOIN `major` ON (class.major_id=major.id) LIMIT 0,2
+2023-10-12 11:37:44.311 [DEBU] {5c4205cdf63e8d171ac2f60ae795e928} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `class`
+2023-10-12 11:37:46.493 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 11:37:46.494 [DEBU] {08ea294ff73e8d171cc2f60ac1c1048a} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 11:37:46.496 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 11:37:46.499 [DEBU] {d0c1664ff73e8d171ec2f60a6573f74e} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 11:37:54.288 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 11:37:54.289 [DEBU] {c803ba1ff93e8d1720c2f60a818481d2} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 11:38:01.332 [DEBU] cmd.go:24: RequestURL: /v1/web/major/list
+2023-10-12 11:38:01.334 [DEBU] {b82ea9c3fa3e8d1722c2f60aeb665e86} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT * FROM `major`
+2023-10-12 15:33:38.802 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 15:33:40.300 [DEBU] {cc408e66d64b8d1741f13f795806fd8a} [1496 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-12 15:33:40.321 [DEBU] {44abd4bfd64b8d1742f13f79ce2747d3} [ 19 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 15:33:40.322 [DEBU] {009311c1d64b8d1743f13f795f7d0d3c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`
+2023-10-12 15:33:40.324 [DEBU] cmd.go:24: RequestURL: /v1/web/user/list
+2023-10-12 15:33:40.326 [DEBU] {cc3345c1d64b8d1745f13f792141caa1} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE id >1 LIMIT 0,10
+2023-10-12 15:33:40.327 [DEBU] {38dc58c1d64b8d1746f13f791a1c1bf8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user`

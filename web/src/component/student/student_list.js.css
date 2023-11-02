@@ -1,0 +1,15 @@
+.student-container{
+
+    width: 100%;
+
+}
+.student-list{
+    display: flex;
+    margin-left: 2%;
+    flex-wrap: wrap;
+
+}
+.student-list-page{
+    margin-top: 2%;
+    margin-left: 75%;
+}

@@ -1,0 +1,22 @@
+
+mysql -uroot -proot -e"show slave status \G" |grep Slave
+
+日志过滤记录表
+黑名单下发记录表
+
+
+
+grep -a "auth failed" /var/log/gf-app/
+grep "ip" /var/log/nginx/server/
+
+scp  /var/log/nginx/server/$(date -d last-day +"%Y-%m-%d".log) @10.3.2.1:/opt/ngin_log_url_emal/
+/usr/bin/scp  /var/log/nginx/server/$(date -d last-day +"%Y-%m-%d".log) @10.3.2.1:/opt/ngin_log_url_emal/
+
+
+
+2023-9-21
+1. 排查云端下载的问题所在
+2. 尝试优化37 云检测日志存储问题
+3. 处理401的设备
+
+11-1  开发底座服务器sftp预览页面

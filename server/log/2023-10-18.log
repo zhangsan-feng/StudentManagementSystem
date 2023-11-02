@@ -1,0 +1,211 @@
+2023-10-18 11:44:48.753 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 11:44:48.754 user_authentication.go:11: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 11:44:48.795 [DEBU] {0c21ca07d5168f17674c76761e6103af} [ 39 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 11:44:48.797 [DEBU] {dc312d0ad5168f17684c7676b3c1784c} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 11:44:48.797 [DEBU] {e469420ad5168f17694c7676a39cd0b1} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 11:44:48.800 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 11:44:48.801 user_authentication.go:11: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 11:44:48.802 [DEBU] {f81b860ad5168f176b4c76760f3ad359} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 11:44:48.804 [DEBU] {e8259b0ad5168f176c4c76764121fe1f} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 11:45:40.275 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 11:45:40.276 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 11:45:40.276 user_authentication.go:14:
+2023-10-18 11:45:40.280 [DEBU] {8080af06e1168f179b2e5136aef2c9bf} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 11:45:40.281 [DEBU] {b888ec06e1168f179c2e513613aa5e82} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 11:45:40.282 [DEBU] {0497fb06e1168f179d2e51365e727c3f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 11:47:15.925 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 11:47:15.926 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 11:47:15.926 user_authentication.go:14:
+2023-10-18 11:47:15.929 [DEBU] {94d7de4bf7168f17e0dd8471e09a31b8} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 11:47:15.930 [DEBU] {dcfb084cf7168f17e1dd847101c57f64} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 11:47:15.931 [DEBU] {58c8104cf7168f17e2dd84718d06d2a9} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:12:58.037 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 14:12:58.037 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 14:12:58.038 user_authentication.go:14:
+2023-10-18 14:12:58.040 [DEBU] {d8a34bbaea1e8f17e5dd8471fa1e6688} [  2 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 14:12:58.041 [DEBU] {2c6171baea1e8f17e6dd847123c2155c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:13:29.657 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 14:13:29.659 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc1NTU4NDYsImp0aSI6IuadjumAjemBpV8yIiwiaWF0IjoxNjk3NTI3MDQ2LCJpc3MiOiLmnY7pgI3pgaVfMiIsInN1YiI6InRva2VuIn0.Sriv8u9MZ-ACKxlI1VFSQr9wYTtKC_RAi7IpJlOW493z6HzsZvVlgEPRhN9eOlMdKGpcESQjvU6t7UQImpGYzg
+2023-10-18 14:13:37.233 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:13:37.237 [DEBU] {40439ddaf31e8f17fe234f401643de15} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:13:37.238 [DEBU] {b4b7bedaf31e8f17ff234f409ec7c4e1} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:13:45.725 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:13:45.726 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJhdWQiOlsiMiJdLCJleHAiOjE2OTc2MjQwMTcsIm5iZiI6MTY5NzYyNDAxNywiaWF0IjoxNjk3NjI0MDE3LCJqdGkiOiIyIn0.G4MdZASn6cRB6rCLYCYrostPcfVcq7Gc7dA6tKYncFySSbCqGLRi8KmNGQEGANi7nw7rKs8i7PBAZtGsCp3pWg
+2023-10-18 14:14:05.328 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:14:05.330 [DEBU] {60752d65fa1e8f1703244f4070ad2554} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:14:06.882 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:14:06.883 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJhdWQiOlsiMiJdLCJleHAiOjE2OTc2MjQwNDUsIm5iZiI6MTY5NzYyNDA0NSwiaWF0IjoxNjk3NjI0MDQ1LCJqdGkiOiIyIn0.IWp3FAXVT72S0T4RxDiivnunu3-V2qwRQCaOnkUVpW9ozrlTEr0zasAGNKm_CB1ON5YqNM1wdFblxskdiTSJqA
+2023-10-18 14:14:58.881 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:14:58.885 [DEBU] {54452bdd061f8f17a416052630eb4344} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:14:58.886 [DEBU] {dcc653dd061f8f17a5160526a9b5f41d} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:15:01.192 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:15:01.193 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJhdWQiOlsiMiJdLCJleHAiOjE2OTc2MjQwOTgsIm5iZiI6MTY5NzYyNDA5OCwiaWF0IjoxNjk3NjI0MDk4LCJqdGkiOiIyIn0.KJpenwRDvVjkHzba3A6accCDpQupeKWddXt0I6g8tcqK9n-STUnNfCLDAjwwW0EZnU7ilk7EapESG8Xi_H7jNg
+2023-10-18 14:15:01.193 user_authentication.go:14:
+2023-10-18 14:15:01.194 user_authentication.go:15: Token is not valid yet
+2023-10-18 14:16:10.226 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:16:10.230 [DEBU] {f48cb479171f8f17d9cb614ca0b134df} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:16:10.231 [DEBU] {d462e079171f8f17dacb614c8153a4f0} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:16:13.488 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:16:13.489 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDE3MCwibmJmIjoxNjk3NjI0MTcwLCJpYXQiOjE2OTc2MjQxNzAsImp0aSI6IjIifQ.j_eWgR7hhysFG8VDi78wRGNMlbQii6ysJPASaOdTUiVbiYK5bzR5bL-kqcU5U9FDFG2YBJGgWXIziqEyA9-CpA
+2023-10-18 14:16:13.490 user_authentication.go:14:
+2023-10-18 14:16:13.490 user_authentication.go:15: Token is not valid yet
+2023-10-18 14:18:20.417 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:18:20.421 [DEBU] {9c01acc9351f8f17ffef3a432ba8caf6} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:18:20.422 [DEBU] {f06fdac9351f8f1700f03a43d46c1ae2} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:18:21.969 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:18:21.969 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDMwMCwibmJmIjotNjIxMzU1OTY4MDAsImlhdCI6LTYyMTM1NTk2ODAwLCJqdGkiOiIyIn0.gaVySueUP-x84XV4fkTt3Nq2UN3hy3bAcf_vQqQr2kYo0VTGf4-OztQj9KD398htTUFKHIuAKbMMmTJvsJ38wQ
+2023-10-18 14:18:21.970 user_authentication.go:14: {"aud":["2"],"exp":1697624300,"iat":-62135596800,"iss":"李逍遥","jti":"2","nbf":-62135596800,"sub":"SB"}
+2023-10-18 14:18:21.971 user_authentication.go:15:
+2023-10-18 14:18:21.972 user_authentication.go:19: {"aud":["2"],"exp":1697624300,"iat":-62135596800,"iss":"李逍遥","jti":"2","nbf":-62135596800,"sub":"SB"}
+2023-10-18 14:18:21.974 [DEBU] {a4835126361f8f1702f03a435db9a80a} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:18:21.974 [DEBU] {f8dd6126361f8f1703f03a43d821818b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:20:05.904 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-18 14:20:05.909 [DEBU] {8c553d594e1f8f17ad31ca15e3d333e3} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:20:05.911 [DEBU] {c01f71594e1f8f17ae31ca15f38cd49f} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='李逍遥') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-18 14:20:07.895 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:20:07.896 user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:20:07.897 user_authentication.go:14: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:20:07.897 user_authentication.go:15:
+2023-10-18 14:20:07.898 [DEBU] {e843eacf4e1f8f17b031ca15b7cbb6ff} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:20:07.900 [DEBU] {3818fdcf4e1f8f17b131ca15e698d285} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:23:53.166 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:23:53.168 user_authentication.go:13: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:23:53.169 user_authentication.go:15: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:23:53.169 user_authentication.go:16:
+2023-10-18 14:24:45.075 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:24:45.076 user_authentication.go:13: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:24:45.076 user_authentication.go:15: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:24:45.077 user_authentication.go:16:
+2023-10-18 14:24:45.080 [DEBU] {b4281a598f1f8f17445ddb5b4ff1beb0} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:24:45.081 [DEBU] {f41d53598f1f8f17455ddb5bf4593f36} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:24:45.082 [DEBU] {286d5c598f1f8f17465ddb5b6a843b7a} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:25:40.860 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:25:40.861 [DEBU] user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:25:40.861 [DEBU] user_authentication.go:14: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:25:40.862 [DEBU] user_authentication.go:15:
+2023-10-18 14:25:40.862 [DEBU] user_authentication.go:19: false
+2023-10-18 14:25:40.865 [DEBU] {0c8231569c1f8f17509c9705437672ed} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:25:40.866 [DEBU] {605f5a569c1f8f17519c97053ae2311f} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:25:40.867 [DEBU] {8c5c63569c1f8f17529c9705d6262465} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:26:03.438 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:26:03.439 [DEBU] user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:26:03.439 [DEBU] user_authentication.go:14: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:26:03.440 [DEBU] user_authentication.go:15:
+2023-10-18 14:26:03.440 [DEBU] user_authentication.go:19: false
+2023-10-18 14:26:03.443 [DEBU] {2449f297a11f8f17769df62963fff200} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:26:03.444 [DEBU] {c0b01b98a11f8f17779df629793b7155} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:26:03.445 [DEBU] {1c2b2c98a11f8f17789df629b1bbf51f} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:26:47.262 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:26:47.263 [DEBU] user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:26:47.264 [DEBU] user_authentication.go:14: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:26:47.264 [DEBU] user_authentication.go:15:
+2023-10-18 14:26:47.264 [DEBU] user_authentication.go:19: false
+2023-10-18 14:26:47.267 [DEBU] {d0c111ccab1f8f1719e9a26e51705b18} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:26:47.269 [DEBU] {e06a3fccab1f8f171ae9a26e0dce2abf} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:26:47.270 [DEBU] {94a24eccab1f8f171be9a26e094872ad} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:28:10.041 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:28:10.042 [DEBU] user_authentication.go:12: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiLmnY7pgI3pgaUiLCJzdWIiOiJTQiIsImF1ZCI6WyIyIl0sImV4cCI6MTY5NzYyNDQwNSwibmJmIjoxNjk3NjEwMDA1LCJpYXQiOjE2OTc2MTAwMDUsImp0aSI6IjIifQ.eJpRxLl41OR911Xy1hxUhBdDcf_LYvuI_YXBQCKZIG3MP75YY29i7RaVMhb8ikU4XynieUq1zYTEeP1BEBxk6w
+2023-10-18 14:28:10.042 [DEBU] user_authentication.go:14: {"aud":["2"],"exp":1697624405,"iat":1697610005,"iss":"李逍遥","jti":"2","nbf":1697610005,"sub":"SB"}
+2023-10-18 14:28:10.042 [DEBU] user_authentication.go:15:
+2023-10-18 14:28:10.044 [DEBU] user_authentication.go:19: true
+2023-10-18 14:28:10.047 [DEBU] {94191a12bf1f8f17c5a5275b4fe206b6} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:28:10.048 [DEBU] {7cf45612bf1f8f17c6a5275b6950f1ea} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:28:10.049 [DEBU] {f82c6612bf1f8f17c7a5275b5f761e74} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:29:08.585 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:29:08.589 [DEBU] {f03480b3cc1f8f173c02561eb31781d6} [  2 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:29:08.590 [DEBU] {483cadb3cc1f8f173d02561ef3dec6c5} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:29:08.591 [DEBU] {3cf7bcb3cc1f8f173e02561e9481407b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:30:30.670 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:30:30.674 [DEBU] {20d615d0df1f8f174002561e529a6b76} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:30:30.675 [DEBU] {b06d48d0df1f8f174102561eebf89635} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:39:32.174 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:39:32.177 [DEBU] {c05748e45d208f174302561e7b16968e} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:39:32.178 [DEBU] {40b664e45d208f174402561ea78f52c2} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:40:13.512 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:40:13.515 [DEBU] {d4a5378467208f174602561ed28c7607} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:40:13.517 [DEBU] {249f618467208f174702561e7690e421} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:41:17.942 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:41:17.944 [DEBU] {54127d8476208f174902561eb7cc0b39} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:41:17.945 [DEBU] {d47c978476208f174a02561e107f9282} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:41:27.453 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:41:27.456 [DEBU] {e4da77bb78208f174c02561ecf0cfed9} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:41:27.457 [DEBU] {e05f8dbb78208f174d02561e000497ea} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:41:39.638 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:41:39.639 [DEBU] {f845ac917b208f174f02561eb9b02ecc} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:41:39.639 [DEBU] {c055b6917b208f175002561eba2e217b} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 14:59:31.118 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 14:59:31.121 [DEBU] {68e7ea0a75218f17696e1b651f2c65f1} [  1 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 14:59:31.122 [DEBU] {700f0b0b75218f176a6e1b65f949eecc} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 14:59:31.123 [DEBU] {e478190b75218f176b6e1b65490efabe} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 15:11:04.619 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/modify?id=9&username=%E5%BC%A0%E8%8B%A5%E6%99%A8&phone=14725836901&create_time=2023-10-11%2014%3A43%3A54
+2023-10-18 15:11:04.845 [DEBU] {1446c18216228f176e6e1b65c73b99d9} [225 ms] [default] [StudentManagementSystem] [rows:1  ] UPDATE `user` SET `username`='张若晨',`phone`='14725836901' WHERE `id`='9'
+2023-10-18 15:12:49.678 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 15:12:49.681 [DEBU] {6813c6f82e228f17706e1b65478c1972} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 15:12:49.682 [DEBU] {8429eef82e228f17716e1b65314d3be9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 15:13:04.549 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/modify?id=10&username=%E8%90%A7%E7%82%8E&phone=3789891452&create_time=2023-10-11%2014%3A43%3A54
+2023-10-18 15:13:04.702 [DEBU] {d461236f32228f17746e1b65ca7f54a8} [152 ms] [default] [StudentManagementSystem] [rows:1  ] UPDATE `user` SET `username`='萧炎',`phone`='3789891452' WHERE `id`='10'
+2023-10-18 15:13:08.270 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 15:13:08.272 [DEBU] {e016f24c33228f17766e1b655bf5f9f1} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 15:13:08.273 [DEBU] {5c000a4d33228f17776e1b658174c2e5} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:06:46.126 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:06:46.127 [DEBU] {ec97108420258f17796e1b650041059f} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:06:46.129 [DEBU] {ac8b2a8420258f177a6e1b658dd6a607} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:06:47.146 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:06:47.150 [DEBU] {b079f6c020258f177c6e1b650dc70968} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:06:47.153 [DEBU] {98ac35c120258f177d6e1b651b5f1a28} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:09:59.131 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:09:59.133 [DEBU] {840a11744d258f177f6e1b650a4c8c14} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:09:59.134 [DEBU] {90dd2c744d258f17806e1b65f97746ed} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:14:54.987 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:14:54.991 [DEBU] {3c298b5692258f17a5790b11b909db1f} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 16:14:54.992 [DEBU] {3c09ba5692258f17a6790b11ae40098d} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:14:54.993 [DEBU] {6cd1c15692258f17a7790b11b80d6859} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:15:48.167 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 16:15:48.171 [DEBU] {485756b89e258f17e29ddc6c98234676} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 16:15:48.172 [DEBU] {c02678b89e258f17e39ddc6c30aa0bd2} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 16:15:48.172 [DEBU] {d4cb87b89e258f17e49ddc6c3a199fa8} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:15:48.173 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-18 16:15:48.174 [DEBU] {1c179fb89e258f17e69ddc6c7a51190c} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-18 16:15:48.176 [DEBU] {24f8b5b89e258f17e79ddc6cbf21bdcd} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:16:39.251 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:16:39.254 [DEBU] {fc5b1b9daa258f17e99ddc6c4b00ea16} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:16:39.254 [DEBU] {e0c7399daa258f17ea9ddc6c86b378f9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:18:51.483 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:18:51.499 [DEBU] {90298a67c9258f17ec9ddc6c38209f39} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:18:51.500 [DEBU] {8c1fbb67c9258f17ed9ddc6c321c4ce7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:19:20.000 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:19:20.001 [DEBU] {a863750ad0258f17ef9ddc6c7d51516b} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:19:20.002 [DEBU] {c0da860ad0258f17f09ddc6c93a33f63} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:19:30.693 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:19:30.706 [DEBU] {58eb7188d2258f17f29ddc6c629704fd} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:19:30.708 [DEBU] {4401ac88d2258f17f39ddc6c8499e16c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:19:45.749 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:19:45.751 [DEBU] {c4d14a09d6258f17f59ddc6c77797bfb} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:19:45.765 [DEBU] {941a1d0ad6258f17f69ddc6c776b0ff3} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:19:54.168 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:19:54.177 [DEBU] {14a47bffd7258f17f89ddc6c5baa10d9} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:19:54.178 [DEBU] {08f793ffd7258f17f99ddc6caefed833} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:20:06.882 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:20:06.901 [DEBU] {24e7bbf5da258f17fb9ddc6c4c7b4320} [  4 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:20:06.904 [DEBU] {bc3219f6da258f17fc9ddc6cdc6c4755} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:20:16.382 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:20:16.383 [DEBU] {34371f2bdd258f17fe9ddc6c9d598ce5} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:20:16.385 [DEBU] {6c8c322bdd258f17ff9ddc6c7414abd9} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:21:57.106 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:21:57.110 [DEBU] {2464c79ef4258f17019edc6cb142ebbf} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:21:57.110 [DEBU] {48ecf29ef4258f17029edc6cfeff2300} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:26:18.129 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:26:18.133 [DEBU] {4c7ff46431268f17049edc6c7467ab04} [  3 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:26:18.135 [DEBU] {981e3b6531268f17059edc6c35cf1c5e} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 16:35:03.104 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list
+2023-10-18 16:35:03.106 [DEBU] {9cd5d49fab268f17079edc6c8e22e2f7} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 16:35:03.107 [DEBU] {fcedf79fab268f17089edc6cf7223e6e} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 17:07:28.614 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/add?username=%E8%B5%B5%E6%97%A5%E5%A4%A9&phone=14725836901&student_id=2022002
+2023-10-18 17:07:28.620 [DEBU] {b019769970288f172e357315d670f736} [  2 ms] [default] [StudentManagementSystem] [rows:8  ] SHOW FULL COLUMNS FROM `user`
+2023-10-18 17:07:28.675 [DEBU] {98d2a79970288f172f3573155b34f3c5} [ 53 ms] [default] [StudentManagementSystem] [rows:1  ] INSERT INTO `user`(`username`,`password`,`phone`,`student_id`,`create_time`,`update_time`,`role`) VALUES('赵日天','ovYRj+Q0HiMfsAu0pZkqMw==','14725836901','2022002','2023-10-18 17:07:28','2023-10-18 17:07:28',1) 
+2023-10-18 17:07:37.430 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list?page=4
+2023-10-18 17:07:37.432 [DEBU] {5ce6cfa672288f17323573152dd1e1e3} [  1 ms] [default] [StudentManagementSystem] [rows:3  ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 30,10
+2023-10-18 17:07:37.434 [DEBU] {cc98e4a672288f173335731579f01c0c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-18 17:07:41.802 [DEBU] cmd.go:24: RequestURL: /v1/web/admin/student/list?page=1
+2023-10-18 17:07:41.804 [DEBU] {8cb566ab73288f1736357315d32fd111} [  1 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username`,`phone`,`create_time`,`student_id` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-18 17:07:41.804 [DEBU] {c46074ab73288f17373573153e1fcd5c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1

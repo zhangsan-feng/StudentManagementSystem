@@ -1,0 +1,109 @@
+2023-10-16 10:34:31.144 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:34:31.153 [DEBU] {482333e8d5758e1720a3ed0e5828b7af} [  4 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-16 10:34:31.155 [DEBU] {785b84e8d5758e1721a3ed0e9aefb041} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:34:31.158 [DEBU] {4c7794e8d5758e1722a3ed0eccb00ea8} [  3 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-16 10:34:31.158 [DEBU] {fc35c1e8d5758e1723a3ed0e945adca7} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:35:16.737 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:35:16.744 [DEBU] {f0649285e0758e1725a3ed0ead1a4edd} [  5 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:35:16.750 [DEBU] {94a3f585e0758e1726a3ed0e4ba865dd} [  5 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:35:18.711 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:35:18.713 [DEBU] {20ac36fbe0758e1728a3ed0e4554edf4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:35:18.714 [DEBU] {583f48fbe0758e1729a3ed0ef18e402c} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:35:30.624 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:35:30.626 [DEBU] {684f46c1e3758e172ba3ed0e54e4964e} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:35:30.627 [DEBU] {dcbc64c1e3758e172ca3ed0efcd94434} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:56:17.503 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:56:17.508 [DEBU] {1872141106778e172ea3ed0ed3575548} [  3 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:56:17.509 [DEBU] {101a471106778e172fa3ed0e98d0bc93} [  1 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:57:05.128 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 10:57:05.131 [DEBU] {64c3af2711778e1732a3ed0ec48c7ec5} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 10:57:05.132 [DEBU] {640cda2711778e1733a3ed0e91467db2} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
+2023-10-16 10:57:33.190 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 10:57:33.193 [DEBU] {1c1f53b017778e1737a3ed0ee269c28c} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-16 10:57:33.194 [DEBU] {8cef7bb017778e1738a3ed0e1418fea4} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 10:57:33.195 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 10:57:33.196 [DEBU] {f0879db017778e173aa3ed0e92cb2205} [  0 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-16 10:57:33.199 [DEBU] {40dcbcb017778e173ba3ed0ee9d628b7} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:04:22.142 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:04:22.145 [DEBU] {54c2bde776778e173da3ed0ec77e9aa7} [  2 ms] [default] [StudentManagementSystem] [rows:10 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,10
+2023-10-16 11:04:22.146 [DEBU] {dc05e8e776778e173ea3ed0ee24d741c} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:04:34.347 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:04:34.352 [DEBU] {3cbc51bf79778e17d4f3e545fe42059e} [  3 ms] [default] [StudentManagementSystem] [rows:7  ] SHOW FULL COLUMNS FROM `user`
+2023-10-16 11:04:34.354 [DEBU] {b8d07fbf79778e17d5f3e54540e56175} [  2 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:04:34.355 [DEBU] {ec0fadbf79778e17d6f3e545cc0fa6b9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:04:37.313 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=2
+2023-10-16 11:04:37.314 [DEBU] {749804707a778e17d9f3e545801e0932} [  0 ms] [default] [StudentManagementSystem] [rows:12 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 20,20
+2023-10-16 11:04:37.315 [DEBU] {74680c707a778e17daf3e545c8c285b9} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:04:38.837 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=1
+2023-10-16 11:04:38.838 [DEBU] {b83ed8ca7a778e17ddf3e54567212aad} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:04:38.839 [DEBU] {28d0e5ca7a778e17def3e545319358fd} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:08:36.542 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:08:36.545 [DEBU] {20ad3523b2778e17e0f3e545d6de9541} [  2 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:08:36.546 [DEBU] {e4516323b2778e17e1f3e545e6b0516c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:08:38.972 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=2
+2023-10-16 11:08:38.973 [DEBU] {1ca7feb3b2778e17e3f3e545ae682b75} [  1 ms] [default] [StudentManagementSystem] [rows:12 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 20,20
+2023-10-16 11:08:38.974 [DEBU] {d06e0fb4b2778e17e4f3e54526cc8fcf} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:08:41.004 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=1
+2023-10-16 11:08:41.004 [DEBU] {7887162db3778e17e6f3e54587a43897} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:08:41.005 [DEBU] {507f1e2db3778e17e7f3e545b7e40748} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:12:29.184 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:12:29.199 [DEBU] {d4cbc54de8778e17e9f3e545390e8a37} [ 13 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:12:29.206 [DEBU] {e822f54ee8778e17eaf3e545b2077713} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:12:53.323 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:12:53.332 [DEBU] {88a5fceced778e17ecf3e545f0b5d970} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:12:53.336 [DEBU] {20952eeded778e17edf3e545eb6a0b59} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:12:58.637 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:12:58.640 [DEBU] {0cec4429ef778e17eff3e5456897b22b} [  2 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:12:58.642 [DEBU] {68f27829ef778e17f0f3e5457cf4e25c} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:13:07.466 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:13:07.473 [DEBU] {90259a37f1778e17f2f3e54593abcc7b} [  5 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:13:07.475 [DEBU] {b0ecee37f1778e17f3f3e545b3fff305} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:13:22.117 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:13:22.129 [DEBU] {ecd8d2a0f4778e17f5f3e545358910f0} [ 10 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:13:22.131 [DEBU] {84228ca1f4778e17f6f3e5454894a184} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:13:27.545 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:13:27.546 [DEBU] {24064ce4f5778e17f8f3e545c2bf6fd2} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:13:27.547 [DEBU] {a03e5be4f5778e17f9f3e5459f059dc5} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:13:31.052 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:13:31.061 [DEBU] {04f677b5f6778e17fbf3e5457410ae3e} [  6 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:13:31.068 [DEBU] {403727b6f6778e17fcf3e545d11d3d44} [  2 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:17:34.770 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:17:34.791 [DEBU] {e86b1c742f788e17fef3e545b9ffcf6a} [ 19 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:17:34.792 [DEBU] {e80559752f788e17fff3e545bcbce268} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:17:43.201 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:17:43.201 [DEBU] {18af8d6a31788e1701f4e54541491645} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:17:43.204 [DEBU] {8490a46a31788e1702f4e545048ecf9e} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:17:47.749 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:17:47.750 [DEBU] {949aac7932788e1704f4e545119c6d2a} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:17:47.751 [DEBU] {80e2b47932788e1705f4e54587469b49} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:17:58.977 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:17:58.979 [DEBU] {cccdf11635788e1707f4e545454e5329} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:17:58.980 [DEBU] {8c900f1735788e1708f4e545625e1fb9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:18:10.529 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:18:10.533 [DEBU] {28d87dc737788e170af4e54500a056cb} [  3 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:18:10.534 [DEBU] {8c55b0c737788e170bf4e545024a04b7} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:18:40.475 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:18:40.476 [DEBU] {fc415ec03e788e170df4e5459f86b779} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:18:40.477 [DEBU] {340171c03e788e170ef4e5457b69915c} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:22:17.971 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:22:17.975 [DEBU] {fc502d6471788e1710f4e545f26a7a27} [  3 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:22:17.976 [DEBU] {f8ee5b6471788e1711f4e545ada4b588} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:22:28.055 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:22:28.064 [DEBU] {68d5a4bd73788e1713f4e54559e436f1} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:22:28.068 [DEBU] {e08bdfbd73788e1714f4e545ce2f59bb} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:22:41.880 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=2
+2023-10-16 11:22:41.881 [DEBU] {1c2142f576788e1716f4e5452ed5c488} [  0 ms] [default] [StudentManagementSystem] [rows:12 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 20,20
+2023-10-16 11:22:41.882 [DEBU] {743454f576788e1717f4e5450fe0eba9} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:22:43.554 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list?page=1
+2023-10-16 11:22:43.555 [DEBU] {a8b8055977788e1719f4e5454a1bbcc1} [  0 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:22:43.557 [DEBU] {90f9185977788e171af4e545b3c4c9f2} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:34:42.977 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:34:42.980 [DEBU] {8447f9d91e798e171cf4e5458b5d85c5} [  2 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:34:42.981 [DEBU] {34bb25da1e798e171df4e54509994753} [  0 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:34:42.983 [DEBU] cmd.go:24: RequestURL: /v1/web/student/list
+2023-10-16 11:34:42.984 [DEBU] {e8e64fda1e798e171ff4e545aa8368e5} [  1 ms] [default] [StudentManagementSystem] [rows:20 ] SELECT `id`,`username` FROM `user` WHERE `role`=1 LIMIT 0,20
+2023-10-16 11:34:42.986 [DEBU] {fc446fda1e798e1720f4e5451699b453} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT COUNT(1) FROM `user` WHERE `role`=1
+2023-10-16 11:37:51.113 [DEBU] cmd.go:24: RequestURL: /v1/web/user/login
+2023-10-16 11:37:51.115 [DEBU] {60b2c2a74a798e1722f4e545df567648} [  1 ms] [default] [StudentManagementSystem] [rows:1  ] SELECT * FROM `user` WHERE (`username`='root') AND (`password`='ovYRj+Q0HiMfsAu0pZkqMw==') LIMIT 1
+2023-10-16 11:37:51.130 [DEBU] {887edda74a798e1723f4e54593478143} [ 14 ms] [default] [StudentManagementSystem] [rows:2  ] SHOW FULL COLUMNS FROM `class_user`
+2023-10-16 11:37:51.131 [DEBU] {8c45c6a84a798e1724f4e5457f1ed566} [  0 ms] [default] [StudentManagementSystem] [rows:0  ] SELECT * FROM `class_user` WHERE `user_id`='1' LIMIT 1
