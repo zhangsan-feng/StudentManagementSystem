@@ -8,8 +8,7 @@ import (
 )
 
 func main() {
-	cmd.Main.Run(gctx.New())
 
-	//fmt.Println(utils.Aes.AesEncrypt("root", "123456781234567812345678"))
+	cmd.Main.Run(gctx.New())
 
 }
